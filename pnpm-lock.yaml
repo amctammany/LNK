@@ -18,25 +18,19 @@ importers:
 
   apps/db:
     specifiers:
-      '@prisma/client': 4.16.2
       '@types/node': ^17.0.12
       '@types/react': 18.2.14
       '@types/react-dom': 18.2.6
       database: workspace:*
       eslint-config-custom: workspace:*
       next: ^13.4.1
-      prisma: ^4.16.2
       react: 18.2.0
       react-dom: ^18.2.0
       tsconfig: workspace:*
       typescript: 5.1.6
       ui: workspace:*
     dependencies:
-<<<<<<< HEAD
-      '@prisma/client': 4.16.2_prisma@4.16.2
-=======
       database: link:../../packages/database
->>>>>>> database
       next: 13.4.1_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -46,7 +40,6 @@ importers:
       '@types/react': 18.2.14
       '@types/react-dom': 18.2.6
       eslint-config-custom: link:../../packages/eslint-config-custom
-      prisma: 4.16.2
       tsconfig: link:../../packages/tsconfig
       typescript: 5.1.6
 

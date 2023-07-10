@@ -3,6 +3,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "db:generate": "turbo run db:generate",
+    "db:seed": "turbo run db:seed",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
@@ -14,5 +16,5 @@
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "@lnk"
+  "name": "lnk"
 }
