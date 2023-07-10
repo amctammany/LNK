@@ -10,6 +10,11 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+        <ul>
+          {d.map((user) => (
+            <li key={user.id}>{user.name}</li>
+          ))}
+        </ul>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
