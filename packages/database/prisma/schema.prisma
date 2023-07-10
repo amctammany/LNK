@@ -15,8 +15,7 @@ generator pothos {
 }
 
 generator pothosCrud {
-  provider            = "prisma-generator-pothos-codegen"
-  generatorConfigPath = "./pothos.config.js"
+  provider = "prisma-generator-pothos-codegen"
 }
 
 model User {

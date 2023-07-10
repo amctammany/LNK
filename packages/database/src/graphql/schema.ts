@@ -1,5 +1,7 @@
 import { generateAllCrud } from "./__generated__/autocrud";
 import { builder } from "./builder";
+import { GraphQLSchema } from "graphql";
+import "@pothos/plugin-prisma";
 
 generateAllCrud();
 //generateAllObjects({ exclude: ["User"] });
@@ -7,6 +9,6 @@ generateAllCrud();
 //generateAllMutations({ exclude: ["User"] });
 builder.queryType({});
 builder.mutationType({});
-const schema = builder.toSchema();
+const schema: GraphQLSchema = builder.toSchema();
 
 export default schema;
