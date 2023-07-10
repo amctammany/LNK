@@ -1,28 +1,21 @@
 {
   "compilerOptions": {
-    "strict": false,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "strict": true,
+    "baseUrl": ".",
     "paths": {
       "@/graphql/*": ["./src/graphql/*"],
       "@/lib/*": ["./src/lib/*"]
     },
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "outDir": "dist",
+    "lib": ["es2021"],
+    "noImplicitAny": true,
+    "target": "ES6",
     "allowJs": true,
-    "emitDeclarationOnly": true,
     "skipLibCheck": true,
-    "declaration": true,
-    "declarationDir": "dist",
     "module": "CommonJS",
     "resolveJsonModule": true,
-    "jsx": "preserve",
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "isolatedModules": true
+    "esModuleInterop": true
   },
   "ts-node": {
     "compilerOptions": {
@@ -34,6 +27,6 @@
       }
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["./src", "../../node_modules/@pothos/plugin-prisma/dts/types"],
+  "exclude": ["dist", "node_modules"]
 }

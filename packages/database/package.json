@@ -5,8 +5,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "builda": "tsup ./src --dts-resolve",
-    "build": "pnpm clean && pnpm db:generate && tsc",
+    "build": "tsup",
+    "bu2ild": "tsc",
     "types": "tsc",
     "clean": "rimraf dist",
     "db:generate": "prisma generate",
@@ -17,14 +17,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^4.16.2",
-    "graphql": "^16.7.1"
-  },
-  "devDependencies": {
     "@pothos/core": "^3.30.0",
     "@pothos/plugin-prisma": "^3.52.0",
+    "@prisma/client": "^4.16.2",
+    "graphql": "^16.7.1",
+    "prisma": "^4.16.2"
+  },
+  "devDependencies": {
     "@types/node": "^17.0.12",
-    "prisma": "^4.16.2",
     "prisma-generator-pothos-codegen": "^0.5.8",
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",

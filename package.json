@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "clean": "turbo run clean",
     "dev": "turbo run dev",
     "db:generate": "turbo run db:generate",
     "db:seed": "turbo run db:seed",

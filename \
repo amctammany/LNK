@@ -8,12 +8,12 @@ module.exports = {
     outputDir: "./src/graphql/__generated__/",
     inputsImporter: `import * as Inputs from '@/graphql/__generated__/inputs';`,
     resolversImports: `import prisma from '@/lib/prisma';`,
-    builderImporter: `import { builder } from '@/graphql/builder';`,
+    builderImporter: `import { builder } from '../builder';`,
     prismaImporter: `import { Prisma } from '@prisma/client';`,
     prismaCaller: "prisma",
   },
   global: {
     prismaImporter: `import { Prisma } from '@prisma/client';`,
-    builderImporter: `import { builder } from '@/graphql/builder';`,
+    builderImporter: `import { builder } from '../src/graphql/builder';`,
   },
 };

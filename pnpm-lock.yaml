@@ -83,13 +83,13 @@ importers:
       tsup: ^7.1.0
       typescript: ^5.1.6
     dependencies:
-      '@prisma/client': 4.16.2_prisma@4.16.2
-      graphql: 16.7.1
-    devDependencies:
       '@pothos/core': 3.30.0_graphql@16.7.1
       '@pothos/plugin-prisma': 3.52.0_h2tejuqtfpwhefujio52llvbaq
-      '@types/node': 17.0.45
+      '@prisma/client': 4.16.2_prisma@4.16.2
+      graphql: 16.7.1
       prisma: 4.16.2
+    devDependencies:
+      '@types/node': 17.0.45
       prisma-generator-pothos-codegen: 0.5.8_opc4k2mbtlbqgekmt4wwbdwslu
       rimraf: 5.0.1
       ts-node: 10.9.1_qobivwqysb4oyvo7tfdjaajnaa
@@ -680,7 +680,6 @@ packages:
       graphql: '>=15.1.0'
     dependencies:
       graphql: 16.7.1
-    dev: true
 
   /@pothos/plugin-prisma/3.52.0_h2tejuqtfpwhefujio52llvbaq:
     resolution: {integrity: sha512-VTh5rj4ddj8XCnoA5OQWyrxFECYir1afDj71raZFdB7usnoHvCntluODPD/z8nSs1lQ4p3AAiJZ1NsS0gBNdjA==}
@@ -698,7 +697,6 @@ packages:
       typescript: 5.1.6
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@prisma/client/4.16.2_prisma@4.16.2:
     resolution: {integrity: sha512-qCoEyxv1ZrQ4bKy39GnylE8Zq31IRmm8bNhNbZx7bF2cU5aiCCnSa93J2imF88MBjn7J9eUQneNxUQVJdl/rPQ==}
@@ -721,7 +719,6 @@ packages:
       strip-ansi: 6.0.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@prisma/debug/4.3.0:
     resolution: {integrity: sha512-9Q7PKvJMAOBC+UQ/hdQwbtqIBg/TLnKYfxB1TmENdkiPFR0SuNPQFzybClCJoc1l6Bal5+ZjQBAVIO8zTVGMNQ==}
@@ -800,7 +797,6 @@ packages:
       kleur: 4.1.5
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@prisma/generator-helper/4.3.0:
     resolution: {integrity: sha512-GeEtQ0WszJpzP03PNpNr+oB4WHYZ4GyHx9wJgJl3cbXfwmOHD0z/H5A8ZidD1Ix3RdnBM1d0R0BjSijHRrr3Nw==}
@@ -933,7 +929,6 @@ packages:
     resolution: {integrity: sha512-KuwNhp3eza+Rhu8IFI5HUXRP0LIhqH5cAjubUvGXXthh4YYBuP2ntwEX+Cz8GJoZUHlKo247wPWOfA9LYEq4cw==}
     dependencies:
       '@types/node': 17.0.45
-    dev: true
 
   /@types/debug/4.1.7:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
@@ -945,7 +940,6 @@ packages:
     resolution: {integrity: sha512-/vPO1EPOs306Cvhwv7KfVfYvOJqA/S/AXjaHQiJboCZzcNDb+TIJFN9/2C9DZ//ijSKWioNyUxD792QmDJ+HKQ==}
     dependencies:
       '@types/ms': 0.7.31
-    dev: true
 
   /@types/glob/7.2.0:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
@@ -971,11 +965,9 @@ packages:
 
   /@types/ms/0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
-    dev: true
 
   /@types/node/17.0.45:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
-    dev: true
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -3313,7 +3305,6 @@ packages:
   /kleur/4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
-    dev: true
 
   /language-subtag-registry/0.3.22:
     resolution: {integrity: sha512-tN0MCzyWnoz/4nHS6uxdlFWoUZT7ABptwKPQ52Ea7URk6vll88bWBVhodtnlfEuCcKWNGoc+uGbw1cwa9IKh/w==}
