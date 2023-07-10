@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
     "strict": true,
-    "rootDir": "src",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@/graphql/*": ["./graphql/*"],
-      "@/lib/*": ["./lib/*"],
+      "@/graphql/*": ["./src/graphql/*"],
+      "@/lib/*": ["./src/lib/*"],
       "@pothos/plugin-prisma": ["../../node_modules/@pothos/plugin-prisma/*jk"]
     },
     "outDir": "dist",
