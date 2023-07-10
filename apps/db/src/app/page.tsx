@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { PrismaClient, Prisma } from "database";
+import { PrismaClient, Prisma, schema } from "database";
 
 export default async function Home() {
   const client = new PrismaClient();
   const d = await client.user.findMany();
-  console.log(d);
+  console.log(schema);
 
   return (
     <main className={styles.main}>

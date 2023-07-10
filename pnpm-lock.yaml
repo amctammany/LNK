@@ -74,12 +74,15 @@ importers:
       '@pothos/plugin-prisma': ^3.52.0
       '@prisma/client': ^4.16.2
       '@types/node': ^17.0.12
+      graphql: ^16.7.1
       prisma: ^4.16.2
       prisma-generator-pothos-codegen: ^0.5.8
       ts-node: ^10.9.1
+      tsconfig: workspace:*
       typescript: ^5.1.6
     dependencies:
       '@prisma/client': 4.16.2_prisma@4.16.2
+      graphql: 16.7.1
     devDependencies:
       '@pothos/core': 3.30.0_graphql@16.7.1
       '@pothos/plugin-prisma': 3.52.0_h2tejuqtfpwhefujio52llvbaq
@@ -87,6 +90,7 @@ importers:
       prisma: 4.16.2
       prisma-generator-pothos-codegen: 0.5.8_opc4k2mbtlbqgekmt4wwbdwslu
       ts-node: 10.9.1_qobivwqysb4oyvo7tfdjaajnaa
+      tsconfig: link:../tsconfig
       typescript: 5.1.6
 
   packages/eslint-config-custom:
@@ -2402,7 +2406,6 @@ packages:
   /graphql/16.7.1:
     resolution: {integrity: sha512-DRYR9tf+UGU0KOsMcKAlXeFfX89UiiIZ0dRU3mR0yJfu6OjZqUcp68NnFLnqQU5RexygFoDy1EW+ccOYcPfmHg==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
-    dev: true
 
   /handlebars/4.7.7:
     resolution: {integrity: sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==}
