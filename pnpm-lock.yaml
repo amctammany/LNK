@@ -71,11 +71,17 @@ importers:
   packages/database:
     specifiers:
       '@prisma/client': ^4.16.2
+      '@types/node': ^17.0.12
       prisma: ^4.16.2
+      ts-node: ^10.9.1
+      typescript: ^5.1.6
     dependencies:
       '@prisma/client': 4.16.2_prisma@4.16.2
     devDependencies:
+      '@types/node': 17.0.45
       prisma: 4.16.2
+      ts-node: 10.9.1_qobivwqysb4oyvo7tfdjaajnaa
+      typescript: 5.1.6
 
   packages/eslint-config-custom:
     specifiers:
@@ -603,6 +609,7 @@ packages:
   /acorn/8.8.2:
     resolution: {integrity: sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==}
     engines: {node: '>=0.4.0'}
+    hasBin: true
 
   /aggregate-error/3.1.0:
     resolution: {integrity: sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==}
