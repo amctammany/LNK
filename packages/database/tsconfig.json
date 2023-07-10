@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
+    "rootDir": "src",
     "baseUrl": "src",
     "paths": {
       "@/graphql/*": ["./graphql/*"],
