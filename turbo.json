@@ -4,10 +4,11 @@
   "globalEnv": ["NODE_ENV"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^db:generate", "^build"],
+      "dependsOn": ["db:generate", "^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "clean": { "cache": false },
+    "types": { "dependsOn": ["build"], "cache": true },
     "lint": {},
     "dev": {
       "dependsOn": ["database#build", "^db:generate"],

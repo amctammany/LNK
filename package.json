@@ -7,6 +7,7 @@
     "db:generate": "turbo run db:generate",
     "db:seed": "turbo run db:seed",
     "lint": "turbo run lint",
+    "types": "turbo run types",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
