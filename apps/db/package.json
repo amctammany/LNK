@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate --data-proxy",
-    "vercel-build": "prisma generate --data-proxy && next build"
+    "vercel-build": "prisma generate --schema=../../packages/database/prisma/schema.prisma --data-proxy && next build"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",
