@@ -14,7 +14,7 @@ export const countUserQueryObject = defineQueryFunction((t) =>
       distinct: t.arg({ type: [Inputs.UserScalarFieldEnum], required: false }),
     },
     resolve: async (_root, args, _context, _info) =>
-      await prisma.user.count({
+      await _context.prisma.user.count({
         where: args.where || undefined,
         cursor: args.cursor || undefined,
         take: args.take || undefined,

@@ -10,7 +10,7 @@ export const updateOneUserMutationObject = defineMutationFunction((t) =>
       data: t.arg({ type: Inputs.UserUpdateInput, required: true }),
     },
     resolve: async (query, _root, args, _context, _info) =>
-      await prisma.user.update({ where: args.where, data: args.data, ...query }),
+      await _context.prisma.user.update({ where: args.where, data: args.data, ...query }),
   }),
 );
 

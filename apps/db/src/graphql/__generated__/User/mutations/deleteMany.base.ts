@@ -8,7 +8,7 @@ export const deleteManyUserMutationObject = defineMutationFunction((t) =>
     nullable: true,
     args: { where: t.arg({ type: Inputs.UserWhereInput, required: true }) },
     resolve: async (_root, args, _context, _info) =>
-      await prisma.user.deleteMany({ where: args.where }),
+      await _context.prisma.user.deleteMany({ where: args.where }),
   }),
 );
 

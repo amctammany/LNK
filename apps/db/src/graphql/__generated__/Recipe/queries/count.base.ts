@@ -14,7 +14,7 @@ export const countRecipeQueryObject = defineQueryFunction((t) =>
       distinct: t.arg({ type: [Inputs.RecipeScalarFieldEnum], required: false }),
     },
     resolve: async (_root, args, _context, _info) =>
-      await prisma.recipe.count({
+      await _context.prisma.recipe.count({
         where: args.where || undefined,
         cursor: args.cursor || undefined,
         take: args.take || undefined,

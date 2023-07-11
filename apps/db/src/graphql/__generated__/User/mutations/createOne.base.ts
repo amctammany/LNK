@@ -7,7 +7,7 @@ export const createOneUserMutationObject = defineMutationFunction((t) =>
     nullable: false,
     args: { data: t.arg({ type: Inputs.UserCreateInput, required: true }) },
     resolve: async (query, _root, args, _context, _info) =>
-      await prisma.user.create({ data: args.data, ...query }),
+      await _context.prisma.user.create({ data: args.data, ...query }),
   }),
 );
 

@@ -8,7 +8,7 @@ export const deleteManyRecipeMutationObject = defineMutationFunction((t) =>
     nullable: true,
     args: { where: t.arg({ type: Inputs.RecipeWhereInput, required: true }) },
     resolve: async (_root, args, _context, _info) =>
-      await prisma.recipe.deleteMany({ where: args.where }),
+      await _context.prisma.recipe.deleteMany({ where: args.where }),
   }),
 );
 

@@ -7,7 +7,7 @@ export const findUniqueRecipeQueryObject = defineQueryFunction((t) =>
     nullable: true,
     args: { where: t.arg({ type: Inputs.RecipeWhereUniqueInput, required: true }) },
     resolve: async (query, _root, args, _context, _info) =>
-      await prisma.recipe.findUnique({ where: args.where, ...query }),
+      await _context.prisma.recipe.findUnique({ where: args.where, ...query }),
   }),
 );
 

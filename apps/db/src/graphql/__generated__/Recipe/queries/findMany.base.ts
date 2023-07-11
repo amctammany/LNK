@@ -14,7 +14,7 @@ export const findManyRecipeQueryObject = defineQueryFunction((t) =>
       distinct: t.arg({ type: [Inputs.RecipeScalarFieldEnum], required: false }),
     },
     resolve: async (query, _root, args, _context, _info) =>
-      await prisma.recipe.findMany({
+      await _context.prisma.recipe.findMany({
         where: args.where || undefined,
         cursor: args.cursor || undefined,
         take: args.take || undefined,

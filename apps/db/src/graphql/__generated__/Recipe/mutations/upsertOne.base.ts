@@ -11,7 +11,7 @@ export const upsertOneRecipeMutationObject = defineMutationFunction((t) =>
       update: t.arg({ type: Inputs.RecipeUpdateInput, required: true }),
     },
     resolve: async (query, _root, args, _context, _info) =>
-      await prisma.recipe.upsert({
+      await _context.prisma.recipe.upsert({
         where: args.where,
         create: args.create,
         update: args.update,

@@ -7,7 +7,7 @@ export const createOneRecipeMutationObject = defineMutationFunction((t) =>
     nullable: false,
     args: { data: t.arg({ type: Inputs.RecipeCreateInput, required: true }) },
     resolve: async (query, _root, args, _context, _info) =>
-      await prisma.recipe.create({ data: args.data, ...query }),
+      await _context.prisma.recipe.create({ data: args.data, ...query }),
   }),
 );
 

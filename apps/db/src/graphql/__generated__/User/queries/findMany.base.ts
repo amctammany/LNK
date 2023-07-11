@@ -14,7 +14,7 @@ export const findManyUserQueryObject = defineQueryFunction((t) =>
       distinct: t.arg({ type: [Inputs.UserScalarFieldEnum], required: false }),
     },
     resolve: async (query, _root, args, _context, _info) =>
-      await prisma.user.findMany({
+      await _context.prisma.user.findMany({
         where: args.where || undefined,
         cursor: args.cursor || undefined,
         take: args.take || undefined,

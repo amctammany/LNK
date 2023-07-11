@@ -11,7 +11,7 @@ export const updateManyUserMutationObject = defineMutationFunction((t) =>
       data: t.arg({ type: Inputs.UserUpdateManyMutationInput, required: true }),
     },
     resolve: async (_root, args, _context, _info) =>
-      await prisma.user.updateMany({ where: args.where || undefined, data: args.data }),
+      await _context.prisma.user.updateMany({ where: args.where || undefined, data: args.data }),
   }),
 );
 

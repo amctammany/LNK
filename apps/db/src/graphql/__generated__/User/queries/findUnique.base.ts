@@ -7,7 +7,7 @@ export const findUniqueUserQueryObject = defineQueryFunction((t) =>
     nullable: true,
     args: { where: t.arg({ type: Inputs.UserWhereUniqueInput, required: true }) },
     resolve: async (query, _root, args, _context, _info) =>
-      await prisma.user.findUnique({ where: args.where, ...query }),
+      await _context.prisma.user.findUnique({ where: args.where, ...query }),
   }),
 );
 

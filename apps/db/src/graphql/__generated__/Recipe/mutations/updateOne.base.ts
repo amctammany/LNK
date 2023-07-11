@@ -10,7 +10,7 @@ export const updateOneRecipeMutationObject = defineMutationFunction((t) =>
       data: t.arg({ type: Inputs.RecipeUpdateInput, required: true }),
     },
     resolve: async (query, _root, args, _context, _info) =>
-      await prisma.recipe.update({ where: args.where, data: args.data, ...query }),
+      await _context.prisma.recipe.update({ where: args.where, data: args.data, ...query }),
   }),
 );
 
