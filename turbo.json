@@ -4,7 +4,7 @@
   "globalEnv": ["NODE_ENV", "APOLLO_SERVER_URI", "DATABASE_URI", "MONGODB_URI"],
   "pipeline": {
     "build": {
-      "dependsOn": ["db:generate", "^build"],
+      "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "clean": { "cache": false },
