@@ -10,7 +10,7 @@
     "types": "tsc",
     "clean": "rimraf dist",
     "prisma": "prisma studio",
-    "db:generate": "prisma generate",
+    "db:generate": "prisma generate --data-proxy",
     "db:seed": "prisma db seed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
