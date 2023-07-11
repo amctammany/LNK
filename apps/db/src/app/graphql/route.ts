@@ -1,4 +1,4 @@
-import { schema } from "database";
+import schema from "../../graphql/schema";
 
 import { ApolloServer } from "@apollo/server";
 import { startServerAndCreateNextHandler } from "@as-integrations/next";

@@ -12,7 +12,8 @@
     "lint": {},
     "prisma": {},
     "dev": {
-      "dependsOn": ["database#build", "^db:generate"],
+      "dependsOn": ["db:generate"],
+
       "cache": false,
       "persistent": true
     },

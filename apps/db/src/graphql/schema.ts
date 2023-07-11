@@ -1,5 +1,3 @@
-import "@pothos/core";
-import "@pothos/plugin-prisma";
 import { generateAllCrud } from "./__generated__/autocrud";
 import { builder } from "./builder";
 import { GraphQLSchema } from "graphql";

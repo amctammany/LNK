@@ -4,9 +4,7 @@ import { getClient } from "../lib/client";
 
 const query = gql`
   {
-    findManyRecipe {
-      name
-    }
+    __typename
   }
 `;
 export default async function Page() {
