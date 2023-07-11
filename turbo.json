@@ -8,7 +8,7 @@
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "clean": { "cache": false },
-    "types": { "dependsOn": ["build"], "cache": true },
+    "types": { "dependsOn": ["build"], "cache": false },
     "lint": {},
     "prisma": {},
     "dev": {

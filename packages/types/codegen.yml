@@ -1,0 +1,12 @@
+overwrite: true
+schema: "https://lnk-db.vercel.app/graphql"
+generates:
+   ./src/index.ts:
+    config:
+      useIndexSignature: true
+      constEnums: true
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-resolvers
+

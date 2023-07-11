@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "lib": ["es2015", "ESNext"],
+
+    "strict": true,
+    "declaration": true,
+    "composite": true,
+    "outDir": "dist",
+    "rootDir": "./src",
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "files": ["./src/index.ts"],
+  "exclude": ["*.sapec.ts", "dist"]
+}
