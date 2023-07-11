@@ -10,6 +10,7 @@ import { Prisma } from "@prisma/client";
 //};
 //import SimpleObjectsPlugin from "@pothos/plugin-simple-objects";
 export type Context = {
+  prisma: typeof prisma;
   client: typeof db;
 };
 export const builder = new SchemaBuilder<{
