@@ -6,7 +6,9 @@
     "dev": "next dev -p 4000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate --data-proxy",
+    "vercel-build": "pnpm db:generate && next build"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",
