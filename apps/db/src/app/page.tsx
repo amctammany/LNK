@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-import p from "@prisma/client";
+import p from "@/graphql/schema";
 export default async function Home() {
   return (
     <main className={styles.main}>
