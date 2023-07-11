@@ -5,6 +5,7 @@ import { startServerAndCreateNextHandler } from "@as-integrations/next";
 import prisma from "@/lib/prisma";
 const server = new ApolloServer({
   schema,
+  introspection: true,
 });
 
 const handler = startServerAndCreateNextHandler(server, {
