@@ -1,24 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { PrismaClient, Prisma, schema } from "database";
 
 export default async function Home() {
-  const client = new PrismaClient();
-  const d = await client.user.findMany();
-  console.log(schema);
-
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <ul>
-          {d.map((user) => (
-            <li key={user.id}>{user.name}</li>
-          ))}
-        </ul>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
+        <p>ApolloServer!</p>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
