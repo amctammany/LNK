@@ -3,7 +3,8 @@ export {
   UserIdFieldObject,
   UserUsernameFieldObject,
   UserNameFieldObject,
-  UserEmailFieldObject
+  UserEmailFieldObject,
+  UserRecipesFieldObject
 } from './object.base';
 export {
   createManyUserMutation,

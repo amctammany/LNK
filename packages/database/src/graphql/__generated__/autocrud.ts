@@ -1,5 +1,6 @@
 import { builder } from '@/graphql/builder';
 import * as User from './User';
+import * as Recipe from './Recipe';
 import * as Objects from './objects';
 
 type Model = Objects.Model;
@@ -28,6 +29,24 @@ export const Cruds: Record<
       updateMany: User.updateManyUserMutationObject,
       updateOne: User.updateOneUserMutationObject,
       upsertOne: User.upsertOneUserMutationObject,
+    },
+  },
+  Recipe: {
+    Object: Recipe.RecipeObject,
+    queries: {
+      findFirst: Recipe.findFirstRecipeQueryObject,
+      findMany: Recipe.findManyRecipeQueryObject,
+      count: Recipe.countRecipeQueryObject,
+      findUnique: Recipe.findUniqueRecipeQueryObject,
+    },
+    mutations: {
+      createMany: Recipe.createManyRecipeMutationObject,
+      createOne: Recipe.createOneRecipeMutationObject,
+      deleteMany: Recipe.deleteManyRecipeMutationObject,
+      deleteOne: Recipe.deleteOneRecipeMutationObject,
+      updateMany: Recipe.updateManyRecipeMutationObject,
+      updateOne: Recipe.updateOneRecipeMutationObject,
+      upsertOne: Recipe.upsertOneRecipeMutationObject,
     },
   },
 };

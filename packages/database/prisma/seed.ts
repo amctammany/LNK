@@ -5,13 +5,32 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
+  await prisma.recipe.deleteMany();
   await prisma.user.deleteMany();
-  //await prisma.user.create({
-  //data: {
-  //email: `testemail@gmail.com`,
-  //role: "ADMIN",
-  //},
-  //});
+  const user = await prisma.user.create({
+    data: {
+      name: "Alex",
+      email: `testemail@gmail.com`,
+      username: "test",
+    },
+  });
+  await prisma.recipe.create({
+    data: {
+      name: "Recipe1",
+      description: "Desc",
+      authorId: user.id,
+      slug: "Recipe1",
+    },
+  });
+  await prisma.recipe.create({
+    data: {
+      name: "Recipe2",
+      description: "Desc",
+      authorId: user.id,
+      slug: "Recipe2",
+    },
+  });
+
   //await prisma.link.createMany({
   //data: links,
   //})

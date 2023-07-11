@@ -4,6 +4,7 @@
     "build": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
+    "prisma": "turbo run prisma",
     "db:generate": "turbo run db:generate",
     "db:seed": "turbo run db:seed",
     "lint": "turbo run lint",
