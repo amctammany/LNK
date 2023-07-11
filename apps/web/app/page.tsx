@@ -4,7 +4,7 @@ import { getClient } from "../lib/client";
 
 const query = gql`
   {
-    __typename
+    countRecipe
   }
 `;
 export default async function Page() {
