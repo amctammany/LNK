@@ -1,7 +1,9 @@
 import { gql } from "@apollo/client";
 import { Button, Header } from "ui";
 import { getClient } from "../lib/client";
+import * as d from "db";
 
+//import { Query, ResolversTypes } from "types";
 const query = gql`
   {
     countRecipe
@@ -9,7 +11,9 @@ const query = gql`
 `;
 export default async function Page() {
   const client = getClient();
-  const { data } = await client.query({ query });
+  const { data } = await client.query({
+    query,
+  });
   return (
     <>
       <Header text="Web" />
