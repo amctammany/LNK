@@ -10,7 +10,6 @@ module.exports = {
     resolversImports: `import prisma from '@/lib/prisma';`,
     builderImporter: `import { builder } from '@/graphql/builder';`,
     prismaImporter: `import { Prisma } from '@prisma/client';`,
-    prismaCaller: "prisma",
   },
   global: {
     prismaImporter: `import { Prisma } from '@prisma/client';`,
