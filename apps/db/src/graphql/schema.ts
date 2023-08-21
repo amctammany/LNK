@@ -10,5 +10,5 @@ builder.queryType({});
 builder.mutationType({});
 const schema: GraphQLSchema = builder.toSchema();
 
-import * as objs from "./__generated__/objects";
+//import * as objs from "./__generated__/objects";
 export default schema;
