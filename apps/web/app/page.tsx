@@ -1,7 +1,6 @@
 import { gql } from "@apollo/client";
 import { Button, Header } from "ui";
 import { getClient } from "../lib/client";
-import * as d from "db";
 
 //import { Query, ResolversTypes } from "types";
 const query = gql`

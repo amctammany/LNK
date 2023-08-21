@@ -5,7 +5,7 @@
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "scripts": {
-    "build": "graphql-codegen",
+    "build": "graphql-codegen && tsc",
     "types": "tsc"
   },
   "devDependencies": {
