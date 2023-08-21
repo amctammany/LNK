@@ -96,9 +96,6 @@ importers:
       '@apollo/experimental-nextjs-app-support':
         specifier: ^0.3.2
         version: 0.3.2(@apollo/client@3.8.0-alpha.15)(next@13.4.1)(react@18.2.0)
-      db:
-        specifier: workspace:*
-        version: link:../db
       next:
         specifier: ^13.4.1
         version: 13.4.1(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0)
@@ -127,6 +124,9 @@ importers:
       tsconfig:
         specifier: workspace:*
         version: link:../../packages/tsconfig
+      types:
+        specifier: workspace:*
+        version: link:../../packages/types
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
