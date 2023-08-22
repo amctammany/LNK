@@ -1,4 +1,6 @@
 import Link from "next/link";
+import * as ui from "ui";
+import "ui/dist/index.css";
 
 const Nav = () => (
   <nav>

@@ -17,7 +17,7 @@ export default async function Page() {
   return (
     <>
       <Header text="Web" />
-      <Button />
+      <Button>Button</Button>
       <p>{JSON.stringify(data)}</p>
     </>
   );
