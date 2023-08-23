@@ -10,6 +10,7 @@
     "clean": { "cache": false },
     "types": { "dependsOn": ["build"] },
     "lint": {},
+    "storybook": {},
     "prisma": {},
     "dev": {
       "dependsOn": ["db:generate"],
