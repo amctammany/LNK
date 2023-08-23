@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Nav, NavLink, Html, Main } from "ui";
 import "ui/dist/index.css";
 export default function RootLayout({ children }) {
