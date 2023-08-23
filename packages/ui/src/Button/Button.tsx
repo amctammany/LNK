@@ -16,10 +16,8 @@ export type ButtonProps = {
  */
 export const Button = ({ onClick, children }: ButtonProps) => {
   return (
-    <div className="border-4 border-red-300 p-5">
-      <button className="p5" onClick={onClick}>
-        <h1 className="text-3xl font-extrabold text-center w-32">{children}</h1>
-      </button>
-    </div>
+    <button className="p5" onClick={onClick}>
+      <h1 className="text-3xl font-extrabold text-center w-32">{children}</h1>
+    </button>
   );
 };
