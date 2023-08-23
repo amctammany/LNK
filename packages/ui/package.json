@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types.d.ts",
   "license": "MIT",
   "scripts": {
-    "dev:css": "tailwindcss -i ./src/inputs.css -o ./src/index.css --watch",
+    "dev": "rollup -c --bundleConfigAsCjs --watch",
     "clean": "rimraf dist",
     "build": "pnpm run build:css && pnpm run build:rollup",
     "build:css": "tailwindcss -i ./src/inputs.css -o ./dist/index.css",
