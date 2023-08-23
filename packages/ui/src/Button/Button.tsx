@@ -1,8 +1,19 @@
 import * as React from "react";
 export type ButtonProps = {
+  /**
+   * Optional onClick handler
+   */
   onClick?: React.EventHandler<any>;
+
+  /**
+   * Inner contents of button
+   */
   children?: React.ReactNode;
 };
+
+/**
+ * UI Button Component
+ */
 export const Button = ({ onClick, children }: ButtonProps) => {
   return (
     <button className="p5" onClick={onClick}>
