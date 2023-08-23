@@ -5,6 +5,7 @@
     "clean": "turbo run clean",
     "dev": "turbo run dev",
     "prisma": "turbo run prisma",
+    "storybook": "turbo run storybook",
     "db:generate": "turbo run db:generate",
     "db:seed": "turbo run db:seed",
     "lint": "turbo run lint",
