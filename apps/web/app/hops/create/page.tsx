@@ -3,8 +3,9 @@ import { getClient } from "../../../lib/client";
 import { HopCreateInput } from "types";
 
 const mutation = gql`
-  mutation CreateHop($data: any) {
+  mutation CreateHop($data: HopCreateInput!) {
     createOneHop(data: $data) {
+      id
       name
       slug
     }
@@ -31,7 +32,7 @@ export default function Page() {
       console.log(r);
     } catch (e) {
       console.log(e);
-      console.error(e.networkError.errors);
+      console.error(e.networkError.result);
     }
   }
   return (

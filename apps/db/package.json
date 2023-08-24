@@ -9,7 +9,7 @@
     "lint": "next lint",
     "prisma": "prisma studio",
     "postinstall": "prisma generate --data-proxy --generator client",
-    "db:generate": "prisma generate --data-proxy",
+    "db:generate": "prisma generate --data-proxy --generator client",
     "db:seed": "prisma db seed"
   },
   "devDependencies": {

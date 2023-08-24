@@ -1,12 +1,12 @@
 import { gql } from "@apollo/client";
 //import { Button, Header } from "ui";
 import { getClient } from "../../lib/client";
-import { type Recipe, QueryFindManyHopArgs } from "types";
+import { type Hop, QueryFindManyHopArgs } from "types";
 import Link from "next/link";
 
 //import { Query, ResolversTypes } from "types";
 const query = gql`
-  {
+  query FindHops {
     findManyHop {
       name
       slug
@@ -15,7 +15,7 @@ const query = gql`
 `;
 export default async function HopsIndexPage() {
   const client = getClient();
-  const { data } = await client.query<Recipe>({
+  const { data } = await client.query<Hop[]>({
     query,
   });
   return (

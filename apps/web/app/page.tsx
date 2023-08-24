@@ -6,7 +6,7 @@ import { type Recipe } from "types";
 //import { Query, ResolversTypes } from "types";
 const query = gql`
   {
-    countRecipe
+    countHop
   }
 `;
 export default async function Page() {
