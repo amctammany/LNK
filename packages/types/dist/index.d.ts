@@ -52,22 +52,589 @@ export type BatchPayload = {
     /** Prisma Batch Payload */
     count: Scalars['Int']['output'];
 };
+export type FloatFieldUpdateOperationsInput = {
+    decrement?: InputMaybe<Scalars['Float']['input']>;
+    divide?: InputMaybe<Scalars['Float']['input']>;
+    increment?: InputMaybe<Scalars['Float']['input']>;
+    multiply?: InputMaybe<Scalars['Float']['input']>;
+    set?: InputMaybe<Scalars['Float']['input']>;
+};
+export type FloatFilter = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    gt?: InputMaybe<Scalars['Float']['input']>;
+    gte?: InputMaybe<Scalars['Float']['input']>;
+    in?: InputMaybe<Array<Scalars['Float']['input']>>;
+    lt?: InputMaybe<Scalars['Float']['input']>;
+    lte?: InputMaybe<Scalars['Float']['input']>;
+    not?: InputMaybe<NestedFloatFilter>;
+    notIn?: InputMaybe<Array<Scalars['Float']['input']>>;
+};
+export type FloatWithAggregatesFilter = {
+    _avg?: InputMaybe<NestedFloatFilter>;
+    _count?: InputMaybe<NestedIntFilter>;
+    _max?: InputMaybe<NestedFloatFilter>;
+    _min?: InputMaybe<NestedFloatFilter>;
+    _sum?: InputMaybe<NestedFloatFilter>;
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    gt?: InputMaybe<Scalars['Float']['input']>;
+    gte?: InputMaybe<Scalars['Float']['input']>;
+    in?: InputMaybe<Array<Scalars['Float']['input']>>;
+    lt?: InputMaybe<Scalars['Float']['input']>;
+    lte?: InputMaybe<Scalars['Float']['input']>;
+    not?: InputMaybe<NestedFloatWithAggregatesFilter>;
+    notIn?: InputMaybe<Array<Scalars['Float']['input']>>;
+};
+export type Hop = {
+    __typename?: 'Hop';
+    alpha: Scalars['Float']['output'];
+    alphaHigh: Scalars['Float']['output'];
+    alphaLow: Scalars['Float']['output'];
+    beta: Scalars['Float']['output'];
+    betaHigh: Scalars['Float']['output'];
+    betaLow: Scalars['Float']['output'];
+    caryophyllene: Scalars['Float']['output'];
+    caryophylleneHigh: Scalars['Float']['output'];
+    caryophylleneLow: Scalars['Float']['output'];
+    cohumulone: Scalars['Float']['output'];
+    cohumuloneHigh: Scalars['Float']['output'];
+    cohumuloneLow: Scalars['Float']['output'];
+    country: Scalars['String']['output'];
+    description: Scalars['String']['output'];
+    farnesene: Scalars['Float']['output'];
+    farneseneHigh: Scalars['Float']['output'];
+    farneseneLow: Scalars['Float']['output'];
+    flavor: Scalars['String']['output'];
+    humulene: Scalars['Float']['output'];
+    humuleneHigh: Scalars['Float']['output'];
+    humuleneLow: Scalars['Float']['output'];
+    id: Scalars['ID']['output'];
+    myrcene: Scalars['Float']['output'];
+    myrceneHigh: Scalars['Float']['output'];
+    myrceneLow: Scalars['Float']['output'];
+    name: Scalars['String']['output'];
+    notes: Scalars['String']['output'];
+    purpose: Scalars['String']['output'];
+    slug: Scalars['String']['output'];
+    styles: Array<Scalars['String']['output']>;
+    totalOil: Scalars['Float']['output'];
+    totalOilHigh: Scalars['Float']['output'];
+    totalOilLow: Scalars['Float']['output'];
+};
+export type HopAvgOrderByAggregateInput = {
+    alpha?: InputMaybe<SortOrder>;
+    alphaHigh?: InputMaybe<SortOrder>;
+    alphaLow?: InputMaybe<SortOrder>;
+    beta?: InputMaybe<SortOrder>;
+    betaHigh?: InputMaybe<SortOrder>;
+    betaLow?: InputMaybe<SortOrder>;
+    caryophyllene?: InputMaybe<SortOrder>;
+    caryophylleneHigh?: InputMaybe<SortOrder>;
+    caryophylleneLow?: InputMaybe<SortOrder>;
+    cohumulone?: InputMaybe<SortOrder>;
+    cohumuloneHigh?: InputMaybe<SortOrder>;
+    cohumuloneLow?: InputMaybe<SortOrder>;
+    farnesene?: InputMaybe<SortOrder>;
+    farneseneHigh?: InputMaybe<SortOrder>;
+    farneseneLow?: InputMaybe<SortOrder>;
+    humulene?: InputMaybe<SortOrder>;
+    humuleneHigh?: InputMaybe<SortOrder>;
+    humuleneLow?: InputMaybe<SortOrder>;
+    myrcene?: InputMaybe<SortOrder>;
+    myrceneHigh?: InputMaybe<SortOrder>;
+    myrceneLow?: InputMaybe<SortOrder>;
+    totalOil?: InputMaybe<SortOrder>;
+    totalOilHigh?: InputMaybe<SortOrder>;
+    totalOilLow?: InputMaybe<SortOrder>;
+};
+export type HopCountOrderByAggregateInput = {
+    alpha?: InputMaybe<SortOrder>;
+    alphaHigh?: InputMaybe<SortOrder>;
+    alphaLow?: InputMaybe<SortOrder>;
+    beta?: InputMaybe<SortOrder>;
+    betaHigh?: InputMaybe<SortOrder>;
+    betaLow?: InputMaybe<SortOrder>;
+    caryophyllene?: InputMaybe<SortOrder>;
+    caryophylleneHigh?: InputMaybe<SortOrder>;
+    caryophylleneLow?: InputMaybe<SortOrder>;
+    cohumulone?: InputMaybe<SortOrder>;
+    cohumuloneHigh?: InputMaybe<SortOrder>;
+    cohumuloneLow?: InputMaybe<SortOrder>;
+    country?: InputMaybe<SortOrder>;
+    description?: InputMaybe<SortOrder>;
+    farnesene?: InputMaybe<SortOrder>;
+    farneseneHigh?: InputMaybe<SortOrder>;
+    farneseneLow?: InputMaybe<SortOrder>;
+    flavor?: InputMaybe<SortOrder>;
+    humulene?: InputMaybe<SortOrder>;
+    humuleneHigh?: InputMaybe<SortOrder>;
+    humuleneLow?: InputMaybe<SortOrder>;
+    id?: InputMaybe<SortOrder>;
+    myrcene?: InputMaybe<SortOrder>;
+    myrceneHigh?: InputMaybe<SortOrder>;
+    myrceneLow?: InputMaybe<SortOrder>;
+    name?: InputMaybe<SortOrder>;
+    notes?: InputMaybe<SortOrder>;
+    purpose?: InputMaybe<SortOrder>;
+    slug?: InputMaybe<SortOrder>;
+    styles?: InputMaybe<SortOrder>;
+    totalOil?: InputMaybe<SortOrder>;
+    totalOilHigh?: InputMaybe<SortOrder>;
+    totalOilLow?: InputMaybe<SortOrder>;
+};
+export type HopCreateInput = {
+    alpha: Scalars['Float']['input'];
+    alphaHigh: Scalars['Float']['input'];
+    alphaLow: Scalars['Float']['input'];
+    beta: Scalars['Float']['input'];
+    betaHigh: Scalars['Float']['input'];
+    betaLow: Scalars['Float']['input'];
+    caryophyllene: Scalars['Float']['input'];
+    caryophylleneHigh: Scalars['Float']['input'];
+    caryophylleneLow: Scalars['Float']['input'];
+    cohumulone: Scalars['Float']['input'];
+    cohumuloneHigh: Scalars['Float']['input'];
+    cohumuloneLow: Scalars['Float']['input'];
+    country: Scalars['String']['input'];
+    description: Scalars['String']['input'];
+    farnesene: Scalars['Float']['input'];
+    farneseneHigh: Scalars['Float']['input'];
+    farneseneLow: Scalars['Float']['input'];
+    flavor: Scalars['String']['input'];
+    humulene: Scalars['Float']['input'];
+    humuleneHigh: Scalars['Float']['input'];
+    humuleneLow: Scalars['Float']['input'];
+    id?: InputMaybe<Scalars['String']['input']>;
+    myrcene: Scalars['Float']['input'];
+    myrceneHigh: Scalars['Float']['input'];
+    myrceneLow: Scalars['Float']['input'];
+    name: Scalars['String']['input'];
+    notes: Scalars['String']['input'];
+    purpose: Scalars['String']['input'];
+    slug: Scalars['String']['input'];
+    styles?: InputMaybe<Array<Scalars['String']['input']>>;
+    totalOil: Scalars['Float']['input'];
+    totalOilHigh: Scalars['Float']['input'];
+    totalOilLow: Scalars['Float']['input'];
+};
+export type HopCreateManyInput = {
+    alpha: Scalars['Float']['input'];
+    alphaHigh: Scalars['Float']['input'];
+    alphaLow: Scalars['Float']['input'];
+    beta: Scalars['Float']['input'];
+    betaHigh: Scalars['Float']['input'];
+    betaLow: Scalars['Float']['input'];
+    caryophyllene: Scalars['Float']['input'];
+    caryophylleneHigh: Scalars['Float']['input'];
+    caryophylleneLow: Scalars['Float']['input'];
+    cohumulone: Scalars['Float']['input'];
+    cohumuloneHigh: Scalars['Float']['input'];
+    cohumuloneLow: Scalars['Float']['input'];
+    country: Scalars['String']['input'];
+    description: Scalars['String']['input'];
+    farnesene: Scalars['Float']['input'];
+    farneseneHigh: Scalars['Float']['input'];
+    farneseneLow: Scalars['Float']['input'];
+    flavor: Scalars['String']['input'];
+    humulene: Scalars['Float']['input'];
+    humuleneHigh: Scalars['Float']['input'];
+    humuleneLow: Scalars['Float']['input'];
+    id?: InputMaybe<Scalars['String']['input']>;
+    myrcene: Scalars['Float']['input'];
+    myrceneHigh: Scalars['Float']['input'];
+    myrceneLow: Scalars['Float']['input'];
+    name: Scalars['String']['input'];
+    notes: Scalars['String']['input'];
+    purpose: Scalars['String']['input'];
+    slug: Scalars['String']['input'];
+    styles?: InputMaybe<Array<Scalars['String']['input']>>;
+    totalOil: Scalars['Float']['input'];
+    totalOilHigh: Scalars['Float']['input'];
+    totalOilLow: Scalars['Float']['input'];
+};
+export type HopCreatestylesInput = {
+    set: Array<Scalars['String']['input']>;
+};
+export type HopMaxOrderByAggregateInput = {
+    alpha?: InputMaybe<SortOrder>;
+    alphaHigh?: InputMaybe<SortOrder>;
+    alphaLow?: InputMaybe<SortOrder>;
+    beta?: InputMaybe<SortOrder>;
+    betaHigh?: InputMaybe<SortOrder>;
+    betaLow?: InputMaybe<SortOrder>;
+    caryophyllene?: InputMaybe<SortOrder>;
+    caryophylleneHigh?: InputMaybe<SortOrder>;
+    caryophylleneLow?: InputMaybe<SortOrder>;
+    cohumulone?: InputMaybe<SortOrder>;
+    cohumuloneHigh?: InputMaybe<SortOrder>;
+    cohumuloneLow?: InputMaybe<SortOrder>;
+    country?: InputMaybe<SortOrder>;
+    description?: InputMaybe<SortOrder>;
+    farnesene?: InputMaybe<SortOrder>;
+    farneseneHigh?: InputMaybe<SortOrder>;
+    farneseneLow?: InputMaybe<SortOrder>;
+    flavor?: InputMaybe<SortOrder>;
+    humulene?: InputMaybe<SortOrder>;
+    humuleneHigh?: InputMaybe<SortOrder>;
+    humuleneLow?: InputMaybe<SortOrder>;
+    id?: InputMaybe<SortOrder>;
+    myrcene?: InputMaybe<SortOrder>;
+    myrceneHigh?: InputMaybe<SortOrder>;
+    myrceneLow?: InputMaybe<SortOrder>;
+    name?: InputMaybe<SortOrder>;
+    notes?: InputMaybe<SortOrder>;
+    purpose?: InputMaybe<SortOrder>;
+    slug?: InputMaybe<SortOrder>;
+    totalOil?: InputMaybe<SortOrder>;
+    totalOilHigh?: InputMaybe<SortOrder>;
+    totalOilLow?: InputMaybe<SortOrder>;
+};
+export type HopMinOrderByAggregateInput = {
+    alpha?: InputMaybe<SortOrder>;
+    alphaHigh?: InputMaybe<SortOrder>;
+    alphaLow?: InputMaybe<SortOrder>;
+    beta?: InputMaybe<SortOrder>;
+    betaHigh?: InputMaybe<SortOrder>;
+    betaLow?: InputMaybe<SortOrder>;
+    caryophyllene?: InputMaybe<SortOrder>;
+    caryophylleneHigh?: InputMaybe<SortOrder>;
+    caryophylleneLow?: InputMaybe<SortOrder>;
+    cohumulone?: InputMaybe<SortOrder>;
+    cohumuloneHigh?: InputMaybe<SortOrder>;
+    cohumuloneLow?: InputMaybe<SortOrder>;
+    country?: InputMaybe<SortOrder>;
+    description?: InputMaybe<SortOrder>;
+    farnesene?: InputMaybe<SortOrder>;
+    farneseneHigh?: InputMaybe<SortOrder>;
+    farneseneLow?: InputMaybe<SortOrder>;
+    flavor?: InputMaybe<SortOrder>;
+    humulene?: InputMaybe<SortOrder>;
+    humuleneHigh?: InputMaybe<SortOrder>;
+    humuleneLow?: InputMaybe<SortOrder>;
+    id?: InputMaybe<SortOrder>;
+    myrcene?: InputMaybe<SortOrder>;
+    myrceneHigh?: InputMaybe<SortOrder>;
+    myrceneLow?: InputMaybe<SortOrder>;
+    name?: InputMaybe<SortOrder>;
+    notes?: InputMaybe<SortOrder>;
+    purpose?: InputMaybe<SortOrder>;
+    slug?: InputMaybe<SortOrder>;
+    totalOil?: InputMaybe<SortOrder>;
+    totalOilHigh?: InputMaybe<SortOrder>;
+    totalOilLow?: InputMaybe<SortOrder>;
+};
+export type HopOrderByWithAggregationInput = {
+    _avg?: InputMaybe<HopAvgOrderByAggregateInput>;
+    _count?: InputMaybe<HopCountOrderByAggregateInput>;
+    _max?: InputMaybe<HopMaxOrderByAggregateInput>;
+    _min?: InputMaybe<HopMinOrderByAggregateInput>;
+    _sum?: InputMaybe<HopSumOrderByAggregateInput>;
+    alpha?: InputMaybe<SortOrder>;
+    alphaHigh?: InputMaybe<SortOrder>;
+    alphaLow?: InputMaybe<SortOrder>;
+    beta?: InputMaybe<SortOrder>;
+    betaHigh?: InputMaybe<SortOrder>;
+    betaLow?: InputMaybe<SortOrder>;
+    caryophyllene?: InputMaybe<SortOrder>;
+    caryophylleneHigh?: InputMaybe<SortOrder>;
+    caryophylleneLow?: InputMaybe<SortOrder>;
+    cohumulone?: InputMaybe<SortOrder>;
+    cohumuloneHigh?: InputMaybe<SortOrder>;
+    cohumuloneLow?: InputMaybe<SortOrder>;
+    country?: InputMaybe<SortOrder>;
+    description?: InputMaybe<SortOrder>;
+    farnesene?: InputMaybe<SortOrder>;
+    farneseneHigh?: InputMaybe<SortOrder>;
+    farneseneLow?: InputMaybe<SortOrder>;
+    flavor?: InputMaybe<SortOrder>;
+    humulene?: InputMaybe<SortOrder>;
+    humuleneHigh?: InputMaybe<SortOrder>;
+    humuleneLow?: InputMaybe<SortOrder>;
+    id?: InputMaybe<SortOrder>;
+    myrcene?: InputMaybe<SortOrder>;
+    myrceneHigh?: InputMaybe<SortOrder>;
+    myrceneLow?: InputMaybe<SortOrder>;
+    name?: InputMaybe<SortOrder>;
+    notes?: InputMaybe<SortOrder>;
+    purpose?: InputMaybe<SortOrder>;
+    slug?: InputMaybe<SortOrder>;
+    styles?: InputMaybe<SortOrder>;
+    totalOil?: InputMaybe<SortOrder>;
+    totalOilHigh?: InputMaybe<SortOrder>;
+    totalOilLow?: InputMaybe<SortOrder>;
+};
+export type HopOrderByWithRelationInput = {
+    alpha?: InputMaybe<SortOrder>;
+    alphaHigh?: InputMaybe<SortOrder>;
+    alphaLow?: InputMaybe<SortOrder>;
+    beta?: InputMaybe<SortOrder>;
+    betaHigh?: InputMaybe<SortOrder>;
+    betaLow?: InputMaybe<SortOrder>;
+    caryophyllene?: InputMaybe<SortOrder>;
+    caryophylleneHigh?: InputMaybe<SortOrder>;
+    caryophylleneLow?: InputMaybe<SortOrder>;
+    cohumulone?: InputMaybe<SortOrder>;
+    cohumuloneHigh?: InputMaybe<SortOrder>;
+    cohumuloneLow?: InputMaybe<SortOrder>;
+    country?: InputMaybe<SortOrder>;
+    description?: InputMaybe<SortOrder>;
+    farnesene?: InputMaybe<SortOrder>;
+    farneseneHigh?: InputMaybe<SortOrder>;
+    farneseneLow?: InputMaybe<SortOrder>;
+    flavor?: InputMaybe<SortOrder>;
+    humulene?: InputMaybe<SortOrder>;
+    humuleneHigh?: InputMaybe<SortOrder>;
+    humuleneLow?: InputMaybe<SortOrder>;
+    id?: InputMaybe<SortOrder>;
+    myrcene?: InputMaybe<SortOrder>;
+    myrceneHigh?: InputMaybe<SortOrder>;
+    myrceneLow?: InputMaybe<SortOrder>;
+    name?: InputMaybe<SortOrder>;
+    notes?: InputMaybe<SortOrder>;
+    purpose?: InputMaybe<SortOrder>;
+    slug?: InputMaybe<SortOrder>;
+    styles?: InputMaybe<SortOrder>;
+    totalOil?: InputMaybe<SortOrder>;
+    totalOilHigh?: InputMaybe<SortOrder>;
+    totalOilLow?: InputMaybe<SortOrder>;
+};
+export declare const enum HopScalarFieldEnum {
+    Alpha = "alpha",
+    AlphaHigh = "alphaHigh",
+    AlphaLow = "alphaLow",
+    Beta = "beta",
+    BetaHigh = "betaHigh",
+    BetaLow = "betaLow",
+    Caryophyllene = "caryophyllene",
+    CaryophylleneHigh = "caryophylleneHigh",
+    CaryophylleneLow = "caryophylleneLow",
+    Cohumulone = "cohumulone",
+    CohumuloneHigh = "cohumuloneHigh",
+    CohumuloneLow = "cohumuloneLow",
+    Country = "country",
+    Description = "description",
+    Farnesene = "farnesene",
+    FarneseneHigh = "farneseneHigh",
+    FarneseneLow = "farneseneLow",
+    Flavor = "flavor",
+    Humulene = "humulene",
+    HumuleneHigh = "humuleneHigh",
+    HumuleneLow = "humuleneLow",
+    Id = "id",
+    Myrcene = "myrcene",
+    MyrceneHigh = "myrceneHigh",
+    MyrceneLow = "myrceneLow",
+    Name = "name",
+    Notes = "notes",
+    Purpose = "purpose",
+    Slug = "slug",
+    Styles = "styles",
+    TotalOil = "totalOil",
+    TotalOilHigh = "totalOilHigh",
+    TotalOilLow = "totalOilLow"
+}
+export type HopScalarWhereWithAggregatesInput = {
+    AND?: InputMaybe<Array<HopScalarWhereWithAggregatesInput>>;
+    NOT?: InputMaybe<Array<HopScalarWhereWithAggregatesInput>>;
+    OR?: InputMaybe<Array<HopScalarWhereWithAggregatesInput>>;
+    alpha?: InputMaybe<FloatWithAggregatesFilter>;
+    alphaHigh?: InputMaybe<FloatWithAggregatesFilter>;
+    alphaLow?: InputMaybe<FloatWithAggregatesFilter>;
+    beta?: InputMaybe<FloatWithAggregatesFilter>;
+    betaHigh?: InputMaybe<FloatWithAggregatesFilter>;
+    betaLow?: InputMaybe<FloatWithAggregatesFilter>;
+    caryophyllene?: InputMaybe<FloatWithAggregatesFilter>;
+    caryophylleneHigh?: InputMaybe<FloatWithAggregatesFilter>;
+    caryophylleneLow?: InputMaybe<FloatWithAggregatesFilter>;
+    cohumulone?: InputMaybe<FloatWithAggregatesFilter>;
+    cohumuloneHigh?: InputMaybe<FloatWithAggregatesFilter>;
+    cohumuloneLow?: InputMaybe<FloatWithAggregatesFilter>;
+    country?: InputMaybe<StringWithAggregatesFilter>;
+    description?: InputMaybe<StringWithAggregatesFilter>;
+    farnesene?: InputMaybe<FloatWithAggregatesFilter>;
+    farneseneHigh?: InputMaybe<FloatWithAggregatesFilter>;
+    farneseneLow?: InputMaybe<FloatWithAggregatesFilter>;
+    flavor?: InputMaybe<StringWithAggregatesFilter>;
+    humulene?: InputMaybe<FloatWithAggregatesFilter>;
+    humuleneHigh?: InputMaybe<FloatWithAggregatesFilter>;
+    humuleneLow?: InputMaybe<FloatWithAggregatesFilter>;
+    id?: InputMaybe<StringWithAggregatesFilter>;
+    myrcene?: InputMaybe<FloatWithAggregatesFilter>;
+    myrceneHigh?: InputMaybe<FloatWithAggregatesFilter>;
+    myrceneLow?: InputMaybe<FloatWithAggregatesFilter>;
+    name?: InputMaybe<StringWithAggregatesFilter>;
+    notes?: InputMaybe<StringWithAggregatesFilter>;
+    purpose?: InputMaybe<StringWithAggregatesFilter>;
+    slug?: InputMaybe<StringWithAggregatesFilter>;
+    styles?: InputMaybe<StringNullableListFilter>;
+    totalOil?: InputMaybe<FloatWithAggregatesFilter>;
+    totalOilHigh?: InputMaybe<FloatWithAggregatesFilter>;
+    totalOilLow?: InputMaybe<FloatWithAggregatesFilter>;
+};
+export type HopSumOrderByAggregateInput = {
+    alpha?: InputMaybe<SortOrder>;
+    alphaHigh?: InputMaybe<SortOrder>;
+    alphaLow?: InputMaybe<SortOrder>;
+    beta?: InputMaybe<SortOrder>;
+    betaHigh?: InputMaybe<SortOrder>;
+    betaLow?: InputMaybe<SortOrder>;
+    caryophyllene?: InputMaybe<SortOrder>;
+    caryophylleneHigh?: InputMaybe<SortOrder>;
+    caryophylleneLow?: InputMaybe<SortOrder>;
+    cohumulone?: InputMaybe<SortOrder>;
+    cohumuloneHigh?: InputMaybe<SortOrder>;
+    cohumuloneLow?: InputMaybe<SortOrder>;
+    farnesene?: InputMaybe<SortOrder>;
+    farneseneHigh?: InputMaybe<SortOrder>;
+    farneseneLow?: InputMaybe<SortOrder>;
+    humulene?: InputMaybe<SortOrder>;
+    humuleneHigh?: InputMaybe<SortOrder>;
+    humuleneLow?: InputMaybe<SortOrder>;
+    myrcene?: InputMaybe<SortOrder>;
+    myrceneHigh?: InputMaybe<SortOrder>;
+    myrceneLow?: InputMaybe<SortOrder>;
+    totalOil?: InputMaybe<SortOrder>;
+    totalOilHigh?: InputMaybe<SortOrder>;
+    totalOilLow?: InputMaybe<SortOrder>;
+};
+export type HopUpdateInput = {
+    alpha?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    alphaHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    alphaLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    beta?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    betaHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    betaLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    caryophyllene?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    caryophylleneHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    caryophylleneLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    cohumulone?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    cohumuloneHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    cohumuloneLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    country?: InputMaybe<StringFieldUpdateOperationsInput>;
+    description?: InputMaybe<StringFieldUpdateOperationsInput>;
+    farnesene?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    farneseneHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    farneseneLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    flavor?: InputMaybe<StringFieldUpdateOperationsInput>;
+    humulene?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    humuleneHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    humuleneLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    myrcene?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    myrceneHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    myrceneLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    name?: InputMaybe<StringFieldUpdateOperationsInput>;
+    notes?: InputMaybe<StringFieldUpdateOperationsInput>;
+    purpose?: InputMaybe<StringFieldUpdateOperationsInput>;
+    slug?: InputMaybe<StringFieldUpdateOperationsInput>;
+    styles?: InputMaybe<Array<Scalars['String']['input']>>;
+    totalOil?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    totalOilHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    totalOilLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+};
+export type HopUpdateManyMutationInput = {
+    alpha?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    alphaHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    alphaLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    beta?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    betaHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    betaLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    caryophyllene?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    caryophylleneHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    caryophylleneLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    cohumulone?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    cohumuloneHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    cohumuloneLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    country?: InputMaybe<StringFieldUpdateOperationsInput>;
+    description?: InputMaybe<StringFieldUpdateOperationsInput>;
+    farnesene?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    farneseneHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    farneseneLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    flavor?: InputMaybe<StringFieldUpdateOperationsInput>;
+    humulene?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    humuleneHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    humuleneLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    myrcene?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    myrceneHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    myrceneLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    name?: InputMaybe<StringFieldUpdateOperationsInput>;
+    notes?: InputMaybe<StringFieldUpdateOperationsInput>;
+    purpose?: InputMaybe<StringFieldUpdateOperationsInput>;
+    slug?: InputMaybe<StringFieldUpdateOperationsInput>;
+    styles?: InputMaybe<Array<Scalars['String']['input']>>;
+    totalOil?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    totalOilHigh?: InputMaybe<FloatFieldUpdateOperationsInput>;
+    totalOilLow?: InputMaybe<FloatFieldUpdateOperationsInput>;
+};
+export type HopUpdatestylesInput = {
+    push?: InputMaybe<Array<Scalars['String']['input']>>;
+    set?: InputMaybe<Array<Scalars['String']['input']>>;
+};
+export type HopWhereInput = {
+    AND?: InputMaybe<Array<HopWhereInput>>;
+    NOT?: InputMaybe<Array<HopWhereInput>>;
+    OR?: InputMaybe<Array<HopWhereInput>>;
+    alpha?: InputMaybe<FloatFilter>;
+    alphaHigh?: InputMaybe<FloatFilter>;
+    alphaLow?: InputMaybe<FloatFilter>;
+    beta?: InputMaybe<FloatFilter>;
+    betaHigh?: InputMaybe<FloatFilter>;
+    betaLow?: InputMaybe<FloatFilter>;
+    caryophyllene?: InputMaybe<FloatFilter>;
+    caryophylleneHigh?: InputMaybe<FloatFilter>;
+    caryophylleneLow?: InputMaybe<FloatFilter>;
+    cohumulone?: InputMaybe<FloatFilter>;
+    cohumuloneHigh?: InputMaybe<FloatFilter>;
+    cohumuloneLow?: InputMaybe<FloatFilter>;
+    country?: InputMaybe<StringFilter>;
+    description?: InputMaybe<StringFilter>;
+    farnesene?: InputMaybe<FloatFilter>;
+    farneseneHigh?: InputMaybe<FloatFilter>;
+    farneseneLow?: InputMaybe<FloatFilter>;
+    flavor?: InputMaybe<StringFilter>;
+    humulene?: InputMaybe<FloatFilter>;
+    humuleneHigh?: InputMaybe<FloatFilter>;
+    humuleneLow?: InputMaybe<FloatFilter>;
+    id?: InputMaybe<StringFilter>;
+    myrcene?: InputMaybe<FloatFilter>;
+    myrceneHigh?: InputMaybe<FloatFilter>;
+    myrceneLow?: InputMaybe<FloatFilter>;
+    name?: InputMaybe<StringFilter>;
+    notes?: InputMaybe<StringFilter>;
+    purpose?: InputMaybe<StringFilter>;
+    slug?: InputMaybe<StringFilter>;
+    styles?: InputMaybe<StringNullableListFilter>;
+    totalOil?: InputMaybe<FloatFilter>;
+    totalOilHigh?: InputMaybe<FloatFilter>;
+    totalOilLow?: InputMaybe<FloatFilter>;
+};
+export type HopWhereUniqueInput = {
+    id?: InputMaybe<Scalars['String']['input']>;
+};
 export type Mutation = {
     __typename?: 'Mutation';
+    createManyHop: Array<Hop>;
     createManyRecipe: Array<Recipe>;
     createManyUser: Array<User>;
+    createOneHop: Hop;
     createOneRecipe: Recipe;
     createOneUser: User;
+    deleteManyHop?: Maybe<BatchPayload>;
     deleteManyRecipe?: Maybe<BatchPayload>;
     deleteManyUser?: Maybe<BatchPayload>;
+    deleteOneHop?: Maybe<Hop>;
     deleteOneRecipe?: Maybe<Recipe>;
     deleteOneUser?: Maybe<User>;
+    updateManyHop: BatchPayload;
     updateManyRecipe: BatchPayload;
     updateManyUser: BatchPayload;
+    updateOneHop?: Maybe<Hop>;
     updateOneRecipe?: Maybe<Recipe>;
     updateOneUser?: Maybe<User>;
+    upsertOneHop: Hop;
     upsertOneRecipe: Recipe;
     upsertOneUser: User;
+};
+export type MutationCreateManyHopArgs = {
+    data: Array<HopCreateInput>;
 };
 export type MutationCreateManyRecipeArgs = {
     data: Array<RecipeCreateInput>;
@@ -75,11 +642,17 @@ export type MutationCreateManyRecipeArgs = {
 export type MutationCreateManyUserArgs = {
     data: Array<UserCreateInput>;
 };
+export type MutationCreateOneHopArgs = {
+    data: HopCreateInput;
+};
 export type MutationCreateOneRecipeArgs = {
     data: RecipeCreateInput;
 };
 export type MutationCreateOneUserArgs = {
     data: UserCreateInput;
+};
+export type MutationDeleteManyHopArgs = {
+    where: HopWhereInput;
 };
 export type MutationDeleteManyRecipeArgs = {
     where: RecipeWhereInput;
@@ -87,11 +660,18 @@ export type MutationDeleteManyRecipeArgs = {
 export type MutationDeleteManyUserArgs = {
     where: UserWhereInput;
 };
+export type MutationDeleteOneHopArgs = {
+    where: HopWhereUniqueInput;
+};
 export type MutationDeleteOneRecipeArgs = {
     where: RecipeWhereUniqueInput;
 };
 export type MutationDeleteOneUserArgs = {
     where: UserWhereUniqueInput;
+};
+export type MutationUpdateManyHopArgs = {
+    data: HopUpdateManyMutationInput;
+    where?: InputMaybe<HopWhereInput>;
 };
 export type MutationUpdateManyRecipeArgs = {
     data: RecipeUpdateManyMutationInput;
@@ -101,6 +681,10 @@ export type MutationUpdateManyUserArgs = {
     data: UserUpdateManyMutationInput;
     where?: InputMaybe<UserWhereInput>;
 };
+export type MutationUpdateOneHopArgs = {
+    data: HopUpdateInput;
+    where: HopWhereUniqueInput;
+};
 export type MutationUpdateOneRecipeArgs = {
     data: RecipeUpdateInput;
     where: RecipeWhereUniqueInput;
@@ -108,6 +692,11 @@ export type MutationUpdateOneRecipeArgs = {
 export type MutationUpdateOneUserArgs = {
     data: UserUpdateInput;
     where: UserWhereUniqueInput;
+};
+export type MutationUpsertOneHopArgs = {
+    create: HopCreateInput;
+    update: HopUpdateInput;
+    where: HopWhereUniqueInput;
 };
 export type MutationUpsertOneRecipeArgs = {
     create: RecipeCreateInput;
@@ -118,6 +707,31 @@ export type MutationUpsertOneUserArgs = {
     create: UserCreateInput;
     update: UserUpdateInput;
     where: UserWhereUniqueInput;
+};
+export type NestedFloatFilter = {
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    gt?: InputMaybe<Scalars['Float']['input']>;
+    gte?: InputMaybe<Scalars['Float']['input']>;
+    in?: InputMaybe<Array<Scalars['Float']['input']>>;
+    lt?: InputMaybe<Scalars['Float']['input']>;
+    lte?: InputMaybe<Scalars['Float']['input']>;
+    not?: InputMaybe<NestedFloatFilter>;
+    notIn?: InputMaybe<Array<Scalars['Float']['input']>>;
+};
+export type NestedFloatWithAggregatesFilter = {
+    _avg?: InputMaybe<NestedFloatFilter>;
+    _count?: InputMaybe<NestedIntFilter>;
+    _max?: InputMaybe<NestedFloatFilter>;
+    _min?: InputMaybe<NestedFloatFilter>;
+    _sum?: InputMaybe<NestedFloatFilter>;
+    equals?: InputMaybe<Scalars['Float']['input']>;
+    gt?: InputMaybe<Scalars['Float']['input']>;
+    gte?: InputMaybe<Scalars['Float']['input']>;
+    in?: InputMaybe<Array<Scalars['Float']['input']>>;
+    lt?: InputMaybe<Scalars['Float']['input']>;
+    lte?: InputMaybe<Scalars['Float']['input']>;
+    not?: InputMaybe<NestedFloatWithAggregatesFilter>;
+    notIn?: InputMaybe<Array<Scalars['Float']['input']>>;
 };
 export type NestedIntFilter = {
     equals?: InputMaybe<Scalars['Int']['input']>;
@@ -160,14 +774,26 @@ export type NestedStringWithAggregatesFilter = {
 };
 export type Query = {
     __typename?: 'Query';
+    countHop: Scalars['Int']['output'];
     countRecipe: Scalars['Int']['output'];
     countUser: Scalars['Int']['output'];
+    findFirstHop?: Maybe<Hop>;
     findFirstRecipe?: Maybe<Recipe>;
     findFirstUser?: Maybe<User>;
+    findManyHop: Array<Hop>;
     findManyRecipe: Array<Recipe>;
     findManyUser: Array<User>;
+    findUniqueHop?: Maybe<Hop>;
     findUniqueRecipe?: Maybe<Recipe>;
     findUniqueUser?: Maybe<User>;
+};
+export type QueryCountHopArgs = {
+    cursor?: InputMaybe<HopWhereUniqueInput>;
+    distinct?: InputMaybe<Array<HopScalarFieldEnum>>;
+    orderBy?: InputMaybe<Array<HopOrderByWithRelationInput>>;
+    skip?: InputMaybe<Scalars['Int']['input']>;
+    take?: InputMaybe<Scalars['Int']['input']>;
+    where?: InputMaybe<HopWhereInput>;
 };
 export type QueryCountRecipeArgs = {
     cursor?: InputMaybe<RecipeWhereUniqueInput>;
@@ -185,6 +811,14 @@ export type QueryCountUserArgs = {
     take?: InputMaybe<Scalars['Int']['input']>;
     where?: InputMaybe<UserWhereInput>;
 };
+export type QueryFindFirstHopArgs = {
+    cursor?: InputMaybe<HopWhereUniqueInput>;
+    distinct?: InputMaybe<Array<HopScalarFieldEnum>>;
+    orderBy?: InputMaybe<Array<HopOrderByWithRelationInput>>;
+    skip?: InputMaybe<Scalars['Int']['input']>;
+    take?: InputMaybe<Scalars['Int']['input']>;
+    where?: InputMaybe<HopWhereInput>;
+};
 export type QueryFindFirstRecipeArgs = {
     cursor?: InputMaybe<RecipeWhereUniqueInput>;
     distinct?: InputMaybe<Array<RecipeScalarFieldEnum>>;
@@ -201,6 +835,14 @@ export type QueryFindFirstUserArgs = {
     take?: InputMaybe<Scalars['Int']['input']>;
     where?: InputMaybe<UserWhereInput>;
 };
+export type QueryFindManyHopArgs = {
+    cursor?: InputMaybe<HopWhereUniqueInput>;
+    distinct?: InputMaybe<Array<HopScalarFieldEnum>>;
+    orderBy?: InputMaybe<Array<HopOrderByWithRelationInput>>;
+    skip?: InputMaybe<Scalars['Int']['input']>;
+    take?: InputMaybe<Scalars['Int']['input']>;
+    where?: InputMaybe<HopWhereInput>;
+};
 export type QueryFindManyRecipeArgs = {
     cursor?: InputMaybe<RecipeWhereUniqueInput>;
     distinct?: InputMaybe<Array<RecipeScalarFieldEnum>>;
@@ -216,6 +858,9 @@ export type QueryFindManyUserArgs = {
     skip?: InputMaybe<Scalars['Int']['input']>;
     take?: InputMaybe<Scalars['Int']['input']>;
     where?: InputMaybe<UserWhereInput>;
+};
+export type QueryFindUniqueHopArgs = {
+    where: HopWhereUniqueInput;
 };
 export type QueryFindUniqueRecipeArgs = {
     where: RecipeWhereUniqueInput;
@@ -426,6 +1071,13 @@ export type StringFilter = {
     notIn?: InputMaybe<Array<Scalars['String']['input']>>;
     startsWith?: InputMaybe<Scalars['String']['input']>;
 };
+export type StringNullableListFilter = {
+    equals?: InputMaybe<Array<Scalars['String']['input']>>;
+    has?: InputMaybe<Scalars['String']['input']>;
+    hasEvery?: InputMaybe<Array<Scalars['String']['input']>>;
+    hasSome?: InputMaybe<Array<Scalars['String']['input']>>;
+    isEmpty?: InputMaybe<Scalars['Boolean']['input']>;
+};
 export type StringWithAggregatesFilter = {
     _count?: InputMaybe<NestedIntFilter>;
     _max?: InputMaybe<NestedStringFilter>;
@@ -614,9 +1266,32 @@ export type ResolversTypes = ResolversObject<{
     BatchPayload: ResolverTypeWrapper<BatchPayload>;
     Boolean: ResolverTypeWrapper<Scalars['Boolean']['output']>;
     Float: ResolverTypeWrapper<Scalars['Float']['output']>;
+    FloatFieldUpdateOperationsInput: FloatFieldUpdateOperationsInput;
+    FloatFilter: FloatFilter;
+    FloatWithAggregatesFilter: FloatWithAggregatesFilter;
+    Hop: ResolverTypeWrapper<Hop>;
+    HopAvgOrderByAggregateInput: HopAvgOrderByAggregateInput;
+    HopCountOrderByAggregateInput: HopCountOrderByAggregateInput;
+    HopCreateInput: HopCreateInput;
+    HopCreateManyInput: HopCreateManyInput;
+    HopCreatestylesInput: HopCreatestylesInput;
+    HopMaxOrderByAggregateInput: HopMaxOrderByAggregateInput;
+    HopMinOrderByAggregateInput: HopMinOrderByAggregateInput;
+    HopOrderByWithAggregationInput: HopOrderByWithAggregationInput;
+    HopOrderByWithRelationInput: HopOrderByWithRelationInput;
+    HopScalarFieldEnum: HopScalarFieldEnum;
+    HopScalarWhereWithAggregatesInput: HopScalarWhereWithAggregatesInput;
+    HopSumOrderByAggregateInput: HopSumOrderByAggregateInput;
+    HopUpdateInput: HopUpdateInput;
+    HopUpdateManyMutationInput: HopUpdateManyMutationInput;
+    HopUpdatestylesInput: HopUpdatestylesInput;
+    HopWhereInput: HopWhereInput;
+    HopWhereUniqueInput: HopWhereUniqueInput;
     ID: ResolverTypeWrapper<Scalars['ID']['output']>;
     Int: ResolverTypeWrapper<Scalars['Int']['output']>;
     Mutation: ResolverTypeWrapper<{}>;
+    NestedFloatFilter: NestedFloatFilter;
+    NestedFloatWithAggregatesFilter: NestedFloatWithAggregatesFilter;
     NestedIntFilter: NestedIntFilter;
     NestedStringFilter: NestedStringFilter;
     NestedStringWithAggregatesFilter: NestedStringWithAggregatesFilter;
@@ -653,6 +1328,7 @@ export type ResolversTypes = ResolversObject<{
     String: ResolverTypeWrapper<Scalars['String']['output']>;
     StringFieldUpdateOperationsInput: StringFieldUpdateOperationsInput;
     StringFilter: StringFilter;
+    StringNullableListFilter: StringNullableListFilter;
     StringWithAggregatesFilter: StringWithAggregatesFilter;
     User: ResolverTypeWrapper<User>;
     UserCountOrderByAggregateInput: UserCountOrderByAggregateInput;
@@ -681,9 +1357,31 @@ export type ResolversParentTypes = ResolversObject<{
     BatchPayload: BatchPayload;
     Boolean: Scalars['Boolean']['output'];
     Float: Scalars['Float']['output'];
+    FloatFieldUpdateOperationsInput: FloatFieldUpdateOperationsInput;
+    FloatFilter: FloatFilter;
+    FloatWithAggregatesFilter: FloatWithAggregatesFilter;
+    Hop: Hop;
+    HopAvgOrderByAggregateInput: HopAvgOrderByAggregateInput;
+    HopCountOrderByAggregateInput: HopCountOrderByAggregateInput;
+    HopCreateInput: HopCreateInput;
+    HopCreateManyInput: HopCreateManyInput;
+    HopCreatestylesInput: HopCreatestylesInput;
+    HopMaxOrderByAggregateInput: HopMaxOrderByAggregateInput;
+    HopMinOrderByAggregateInput: HopMinOrderByAggregateInput;
+    HopOrderByWithAggregationInput: HopOrderByWithAggregationInput;
+    HopOrderByWithRelationInput: HopOrderByWithRelationInput;
+    HopScalarWhereWithAggregatesInput: HopScalarWhereWithAggregatesInput;
+    HopSumOrderByAggregateInput: HopSumOrderByAggregateInput;
+    HopUpdateInput: HopUpdateInput;
+    HopUpdateManyMutationInput: HopUpdateManyMutationInput;
+    HopUpdatestylesInput: HopUpdatestylesInput;
+    HopWhereInput: HopWhereInput;
+    HopWhereUniqueInput: HopWhereUniqueInput;
     ID: Scalars['ID']['output'];
     Int: Scalars['Int']['output'];
     Mutation: {};
+    NestedFloatFilter: NestedFloatFilter;
+    NestedFloatWithAggregatesFilter: NestedFloatWithAggregatesFilter;
     NestedIntFilter: NestedIntFilter;
     NestedStringFilter: NestedStringFilter;
     NestedStringWithAggregatesFilter: NestedStringWithAggregatesFilter;
@@ -717,6 +1415,7 @@ export type ResolversParentTypes = ResolversObject<{
     String: Scalars['String']['output'];
     StringFieldUpdateOperationsInput: StringFieldUpdateOperationsInput;
     StringFilter: StringFilter;
+    StringNullableListFilter: StringNullableListFilter;
     StringWithAggregatesFilter: StringWithAggregatesFilter;
     User: User;
     UserCountOrderByAggregateInput: UserCountOrderByAggregateInput;
@@ -743,29 +1442,76 @@ export type BatchPayloadResolvers<ContextType = any, ParentType extends Resolver
     count?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
     __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
+export type HopResolvers<ContextType = any, ParentType extends ResolversParentTypes['Hop'] = ResolversParentTypes['Hop']> = ResolversObject<{
+    alpha?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    alphaHigh?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    alphaLow?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    beta?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    betaHigh?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    betaLow?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    caryophyllene?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    caryophylleneHigh?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    caryophylleneLow?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    cohumulone?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    cohumuloneHigh?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    cohumuloneLow?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    country?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+    description?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+    farnesene?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    farneseneHigh?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    farneseneLow?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    flavor?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+    humulene?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    humuleneHigh?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    humuleneLow?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+    myrcene?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    myrceneHigh?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    myrceneLow?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+    notes?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+    purpose?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+    slug?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+    styles?: Resolver<Array<ResolversTypes['String']>, ParentType, ContextType>;
+    totalOil?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    totalOilHigh?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    totalOilLow?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+    __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+}>;
 export type MutationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = ResolversObject<{
+    createManyHop?: Resolver<Array<ResolversTypes['Hop']>, ParentType, ContextType, RequireFields<MutationCreateManyHopArgs, 'data'>>;
     createManyRecipe?: Resolver<Array<ResolversTypes['Recipe']>, ParentType, ContextType, RequireFields<MutationCreateManyRecipeArgs, 'data'>>;
     createManyUser?: Resolver<Array<ResolversTypes['User']>, ParentType, ContextType, RequireFields<MutationCreateManyUserArgs, 'data'>>;
+    createOneHop?: Resolver<ResolversTypes['Hop'], ParentType, ContextType, RequireFields<MutationCreateOneHopArgs, 'data'>>;
     createOneRecipe?: Resolver<ResolversTypes['Recipe'], ParentType, ContextType, RequireFields<MutationCreateOneRecipeArgs, 'data'>>;
     createOneUser?: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<MutationCreateOneUserArgs, 'data'>>;
+    deleteManyHop?: Resolver<Maybe<ResolversTypes['BatchPayload']>, ParentType, ContextType, RequireFields<MutationDeleteManyHopArgs, 'where'>>;
     deleteManyRecipe?: Resolver<Maybe<ResolversTypes['BatchPayload']>, ParentType, ContextType, RequireFields<MutationDeleteManyRecipeArgs, 'where'>>;
     deleteManyUser?: Resolver<Maybe<ResolversTypes['BatchPayload']>, ParentType, ContextType, RequireFields<MutationDeleteManyUserArgs, 'where'>>;
+    deleteOneHop?: Resolver<Maybe<ResolversTypes['Hop']>, ParentType, ContextType, RequireFields<MutationDeleteOneHopArgs, 'where'>>;
     deleteOneRecipe?: Resolver<Maybe<ResolversTypes['Recipe']>, ParentType, ContextType, RequireFields<MutationDeleteOneRecipeArgs, 'where'>>;
     deleteOneUser?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, RequireFields<MutationDeleteOneUserArgs, 'where'>>;
+    updateManyHop?: Resolver<ResolversTypes['BatchPayload'], ParentType, ContextType, RequireFields<MutationUpdateManyHopArgs, 'data'>>;
     updateManyRecipe?: Resolver<ResolversTypes['BatchPayload'], ParentType, ContextType, RequireFields<MutationUpdateManyRecipeArgs, 'data'>>;
     updateManyUser?: Resolver<ResolversTypes['BatchPayload'], ParentType, ContextType, RequireFields<MutationUpdateManyUserArgs, 'data'>>;
+    updateOneHop?: Resolver<Maybe<ResolversTypes['Hop']>, ParentType, ContextType, RequireFields<MutationUpdateOneHopArgs, 'data' | 'where'>>;
     updateOneRecipe?: Resolver<Maybe<ResolversTypes['Recipe']>, ParentType, ContextType, RequireFields<MutationUpdateOneRecipeArgs, 'data' | 'where'>>;
     updateOneUser?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, RequireFields<MutationUpdateOneUserArgs, 'data' | 'where'>>;
+    upsertOneHop?: Resolver<ResolversTypes['Hop'], ParentType, ContextType, RequireFields<MutationUpsertOneHopArgs, 'create' | 'update' | 'where'>>;
     upsertOneRecipe?: Resolver<ResolversTypes['Recipe'], ParentType, ContextType, RequireFields<MutationUpsertOneRecipeArgs, 'create' | 'update' | 'where'>>;
     upsertOneUser?: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<MutationUpsertOneUserArgs, 'create' | 'update' | 'where'>>;
 }>;
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
+    countHop?: Resolver<ResolversTypes['Int'], ParentType, ContextType, Partial<QueryCountHopArgs>>;
     countRecipe?: Resolver<ResolversTypes['Int'], ParentType, ContextType, Partial<QueryCountRecipeArgs>>;
     countUser?: Resolver<ResolversTypes['Int'], ParentType, ContextType, Partial<QueryCountUserArgs>>;
+    findFirstHop?: Resolver<Maybe<ResolversTypes['Hop']>, ParentType, ContextType, Partial<QueryFindFirstHopArgs>>;
     findFirstRecipe?: Resolver<Maybe<ResolversTypes['Recipe']>, ParentType, ContextType, Partial<QueryFindFirstRecipeArgs>>;
     findFirstUser?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, Partial<QueryFindFirstUserArgs>>;
+    findManyHop?: Resolver<Array<ResolversTypes['Hop']>, ParentType, ContextType, Partial<QueryFindManyHopArgs>>;
     findManyRecipe?: Resolver<Array<ResolversTypes['Recipe']>, ParentType, ContextType, Partial<QueryFindManyRecipeArgs>>;
     findManyUser?: Resolver<Array<ResolversTypes['User']>, ParentType, ContextType, Partial<QueryFindManyUserArgs>>;
+    findUniqueHop?: Resolver<Maybe<ResolversTypes['Hop']>, ParentType, ContextType, RequireFields<QueryFindUniqueHopArgs, 'where'>>;
     findUniqueRecipe?: Resolver<Maybe<ResolversTypes['Recipe']>, ParentType, ContextType, RequireFields<QueryFindUniqueRecipeArgs, 'where'>>;
     findUniqueUser?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, RequireFields<QueryFindUniqueUserArgs, 'where'>>;
 }>;
@@ -788,6 +1534,7 @@ export type UserResolvers<ContextType = any, ParentType extends ResolversParentT
 }>;
 export type Resolvers<ContextType = any> = ResolversObject<{
     BatchPayload?: BatchPayloadResolvers<ContextType>;
+    Hop?: HopResolvers<ContextType>;
     Mutation?: MutationResolvers<ContextType>;
     Query?: QueryResolvers<ContextType>;
     Recipe?: RecipeResolvers<ContextType>;

@@ -5,14 +5,16 @@
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "scripts": {
-    "build": "graphql-codegen && tsc",
-    "types": "tsc"
+    "clean": "rimraf dist",
+    "build": "tsc",
+    "types": "graphql-codegen"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^4.0.1",
     "@graphql-codegen/typescript": "^4.0.1",
     "@graphql-codegen/typescript-operations": "^4.0.1",
     "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "rimraf": "^5.0.1",
     "typescript": "^5.1.6"
   },
   "keywords": [],

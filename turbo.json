@@ -4,11 +4,11 @@
   "globalEnv": ["NODE_ENV", "APOLLO_SERVER_URI", "DATABASE_URI", "MONGODB_URI"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build", "^clean"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+      "dependsOn": ["^build", "clean", "types"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
     "clean": { "cache": false },
-    "types": { "dependsOn": ["build"] },
+    "types": { "cache": false },
     "lint": {},
     "storybook": {},
     "prisma": {},

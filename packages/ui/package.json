@@ -6,14 +6,14 @@
   "types": "dist/types.d.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "rollup -c --bundleConfigAsCjs --watch --watch.onBundleStart=\"pnpm run tailwind\"",
+    "dev1": "rollup -c --bundleConfigAsCjs --watch --watch.onBundleStart=\"pnpm run tailwind\"",
     "tailwind": "tailwindcss -i ./src/index.css -o ./dist/index.css",
-    "clean": "rimraf dist",
-    "build": "pnpm run tailwind && pnpm run rollup",
+    "clean1": "rimraf dist",
+    "build1": "pnpm run tailwind && pnpm run rollup",
     "rollup": "rollup -c --bundleConfigAsCjs",
-    "lint": "eslint \"**/*.ts*\"",
+    "lint1": "eslint \"**/*.ts*\"",
     "generate:component": "turbo gen react-component",
-    "storybook": "storybook dev -p 6006",
+    "storybook1": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "devDependencies": {

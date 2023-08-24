@@ -181,6 +181,9 @@ importers:
       '@graphql-codegen/typescript-resolvers':
         specifier: ^4.0.1
         version: 4.0.1(graphql@16.7.1)
+      rimraf:
+        specifier: ^5.0.1
+        version: 5.0.1
       typescript:
         specifier: ^5.1.6
         version: 5.1.6
