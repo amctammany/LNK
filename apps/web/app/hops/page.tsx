@@ -8,6 +8,7 @@ import Link from "next/link";
 const query = gql`
   query FindHops {
     findManyHop {
+      id
       name
       urlString
       slug
@@ -16,13 +17,22 @@ const query = gql`
 `;
 export default async function HopsIndexPage() {
   const client = getClient();
-  const { data } = await client.query<Hop[]>({
+  const { data } = await client.query<{
+    findManyHop: (Hop & { urlString: string })[];
+  }>({
     query,
   });
+  console.log(data);
   return (
     <>
       <Link href="/hops/create">Create New</Link>
-      <p>{JSON.stringify(data)}</p>
+      <ul>
+        {data.findManyHop.map((hop) => (
+          <li key={hop.id}>
+            <Link href={hop.urlString}>{hop.name}</Link>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

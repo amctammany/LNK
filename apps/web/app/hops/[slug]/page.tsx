@@ -3,6 +3,7 @@ import { gql } from "@apollo/client";
 import { getClient } from "../../../lib/client";
 import { type Hop, QueryFindFirstHopArgs } from "types";
 import Link from "next/link";
+import HopDisplay from "./HopDisplay";
 
 //import { Query, ResolversTypes } from "types";
 const query = gql`
@@ -15,16 +16,11 @@ const query = gql`
 `;
 export default async function HopDetailPage({ params: { slug } }) {
   const client = getClient();
-  console.log({ slug });
-  const { data } = await client.query<Hop>({
+  const { data } = await client.query<{ findFirstHop: Hop }>({
     query,
     variables: {
       slug,
     },
   });
-  return (
-    <>
-      <p>{JSON.stringify(data)}</p>
-    </>
-  );
+  return <HopDisplay hop={data.findFirstHop} />;
 }

@@ -87,6 +87,7 @@ export type Hop = {
   totalOil?: Maybe<Scalars['Float']['output']>;
   totalOilHigh?: Maybe<Scalars['Float']['output']>;
   totalOilLow?: Maybe<Scalars['Float']['output']>;
+  urlString: Scalars['String']['output'];
 };
 
 export type HopAvgOrderByAggregateInput = {
@@ -995,12 +996,40 @@ export const enum QueryMode {
 
 export type Recipe = {
   __typename?: 'Recipe';
-  author: User;
-  authorId: Scalars['String']['output'];
-  description: Scalars['String']['output'];
+  alpha?: Maybe<Scalars['Float']['output']>;
+  alphaHigh?: Maybe<Scalars['Float']['output']>;
+  alphaLow?: Maybe<Scalars['Float']['output']>;
+  beta?: Maybe<Scalars['Float']['output']>;
+  betaHigh?: Maybe<Scalars['Float']['output']>;
+  betaLow?: Maybe<Scalars['Float']['output']>;
+  caryophyllene?: Maybe<Scalars['Float']['output']>;
+  caryophylleneHigh?: Maybe<Scalars['Float']['output']>;
+  caryophylleneLow?: Maybe<Scalars['Float']['output']>;
+  cohumulone?: Maybe<Scalars['Float']['output']>;
+  cohumuloneHigh?: Maybe<Scalars['Float']['output']>;
+  cohumuloneLow?: Maybe<Scalars['Float']['output']>;
+  country?: Maybe<Scalars['String']['output']>;
+  description?: Maybe<Scalars['String']['output']>;
+  farnesene?: Maybe<Scalars['Float']['output']>;
+  farneseneHigh?: Maybe<Scalars['Float']['output']>;
+  farneseneLow?: Maybe<Scalars['Float']['output']>;
+  flavor?: Maybe<Scalars['String']['output']>;
+  humulene?: Maybe<Scalars['Float']['output']>;
+  humuleneHigh?: Maybe<Scalars['Float']['output']>;
+  humuleneLow?: Maybe<Scalars['Float']['output']>;
   id: Scalars['ID']['output'];
+  myrcene?: Maybe<Scalars['Float']['output']>;
+  myrceneHigh?: Maybe<Scalars['Float']['output']>;
+  myrceneLow?: Maybe<Scalars['Float']['output']>;
   name: Scalars['String']['output'];
+  notes?: Maybe<Scalars['String']['output']>;
+  purpose?: Maybe<Scalars['String']['output']>;
   slug: Scalars['String']['output'];
+  styles: Array<Scalars['String']['output']>;
+  totalOil?: Maybe<Scalars['Float']['output']>;
+  totalOilHigh?: Maybe<Scalars['Float']['output']>;
+  totalOilLow?: Maybe<Scalars['Float']['output']>;
+  urlString: Scalars['String']['output'];
 };
 
 export type RecipeCountOrderByAggregateInput = {
@@ -1289,6 +1318,7 @@ export type User = {
   id: Scalars['ID']['output'];
   name: Scalars['String']['output'];
   recipes: Array<Recipe>;
+  slug: Scalars['String']['output'];
   username: Scalars['String']['output'];
 };
 
@@ -1306,6 +1336,7 @@ export type UserCountOrderByAggregateInput = {
   email?: InputMaybe<SortOrder>;
   id?: InputMaybe<SortOrder>;
   name?: InputMaybe<SortOrder>;
+  slug?: InputMaybe<SortOrder>;
   username?: InputMaybe<SortOrder>;
 };
 
@@ -1314,6 +1345,7 @@ export type UserCreateInput = {
   id?: InputMaybe<Scalars['String']['input']>;
   name: Scalars['String']['input'];
   recipes?: InputMaybe<RecipeCreateNestedManyWithoutAuthorInput>;
+  slug: Scalars['String']['input'];
   username: Scalars['String']['input'];
 };
 
@@ -1321,6 +1353,7 @@ export type UserCreateManyInput = {
   email: Scalars['String']['input'];
   id?: InputMaybe<Scalars['String']['input']>;
   name: Scalars['String']['input'];
+  slug: Scalars['String']['input'];
   username: Scalars['String']['input'];
 };
 
@@ -1339,6 +1372,7 @@ export type UserCreateWithoutRecipesInput = {
   email: Scalars['String']['input'];
   id?: InputMaybe<Scalars['String']['input']>;
   name: Scalars['String']['input'];
+  slug: Scalars['String']['input'];
   username: Scalars['String']['input'];
 };
 
@@ -1346,6 +1380,7 @@ export type UserMaxOrderByAggregateInput = {
   email?: InputMaybe<SortOrder>;
   id?: InputMaybe<SortOrder>;
   name?: InputMaybe<SortOrder>;
+  slug?: InputMaybe<SortOrder>;
   username?: InputMaybe<SortOrder>;
 };
 
@@ -1353,6 +1388,7 @@ export type UserMinOrderByAggregateInput = {
   email?: InputMaybe<SortOrder>;
   id?: InputMaybe<SortOrder>;
   name?: InputMaybe<SortOrder>;
+  slug?: InputMaybe<SortOrder>;
   username?: InputMaybe<SortOrder>;
 };
 
@@ -1363,6 +1399,7 @@ export type UserOrderByWithAggregationInput = {
   email?: InputMaybe<SortOrder>;
   id?: InputMaybe<SortOrder>;
   name?: InputMaybe<SortOrder>;
+  slug?: InputMaybe<SortOrder>;
   username?: InputMaybe<SortOrder>;
 };
 
@@ -1371,6 +1408,7 @@ export type UserOrderByWithRelationInput = {
   id?: InputMaybe<SortOrder>;
   name?: InputMaybe<SortOrder>;
   recipes?: InputMaybe<RecipeOrderByRelationAggregateInput>;
+  slug?: InputMaybe<SortOrder>;
   username?: InputMaybe<SortOrder>;
 };
 
@@ -1383,6 +1421,7 @@ export const enum UserScalarFieldEnum {
   Email = 'email',
   Id = 'id',
   Name = 'name',
+  Slug = 'slug',
   Username = 'username'
 };
 
@@ -1393,6 +1432,7 @@ export type UserScalarWhereWithAggregatesInput = {
   email?: InputMaybe<StringWithAggregatesFilter>;
   id?: InputMaybe<StringWithAggregatesFilter>;
   name?: InputMaybe<StringWithAggregatesFilter>;
+  slug?: InputMaybe<StringWithAggregatesFilter>;
   username?: InputMaybe<StringWithAggregatesFilter>;
 };
 
@@ -1400,12 +1440,14 @@ export type UserUpdateInput = {
   email?: InputMaybe<StringFieldUpdateOperationsInput>;
   name?: InputMaybe<StringFieldUpdateOperationsInput>;
   recipes?: InputMaybe<RecipeUpdateManyWithoutAuthorNestedInput>;
+  slug?: InputMaybe<StringFieldUpdateOperationsInput>;
   username?: InputMaybe<StringFieldUpdateOperationsInput>;
 };
 
 export type UserUpdateManyMutationInput = {
   email?: InputMaybe<StringFieldUpdateOperationsInput>;
   name?: InputMaybe<StringFieldUpdateOperationsInput>;
+  slug?: InputMaybe<StringFieldUpdateOperationsInput>;
   username?: InputMaybe<StringFieldUpdateOperationsInput>;
 };
 
@@ -1420,6 +1462,7 @@ export type UserUpdateOneRequiredWithoutRecipesNestedInput = {
 export type UserUpdateWithoutRecipesInput = {
   email?: InputMaybe<StringFieldUpdateOperationsInput>;
   name?: InputMaybe<StringFieldUpdateOperationsInput>;
+  slug?: InputMaybe<StringFieldUpdateOperationsInput>;
   username?: InputMaybe<StringFieldUpdateOperationsInput>;
 };
 
@@ -1436,6 +1479,7 @@ export type UserWhereInput = {
   id?: InputMaybe<StringFilter>;
   name?: InputMaybe<StringFilter>;
   recipes?: InputMaybe<RecipeListRelationFilter>;
+  slug?: InputMaybe<StringFilter>;
   username?: InputMaybe<StringFilter>;
 };
 
@@ -1744,6 +1788,7 @@ export type HopResolvers<ContextType = any, ParentType extends ResolversParentTy
   totalOil?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
   totalOilHigh?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
   totalOilLow?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  urlString?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
@@ -1787,12 +1832,40 @@ export type QueryResolvers<ContextType = any, ParentType extends ResolversParent
 }>;
 
 export type RecipeResolvers<ContextType = any, ParentType extends ResolversParentTypes['Recipe'] = ResolversParentTypes['Recipe']> = ResolversObject<{
-  author?: Resolver<ResolversTypes['User'], ParentType, ContextType>;
-  authorId?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  description?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  alpha?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  alphaHigh?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  alphaLow?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  beta?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  betaHigh?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  betaLow?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  caryophyllene?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  caryophylleneHigh?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  caryophylleneLow?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  cohumulone?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  cohumuloneHigh?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  cohumuloneLow?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  country?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  description?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  farnesene?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  farneseneHigh?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  farneseneLow?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  flavor?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  humulene?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  humuleneHigh?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  humuleneLow?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  myrcene?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  myrceneHigh?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  myrceneLow?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  notes?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  purpose?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   slug?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  styles?: Resolver<Array<ResolversTypes['String']>, ParentType, ContextType>;
+  totalOil?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  totalOilHigh?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  totalOilLow?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  urlString?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
@@ -1801,6 +1874,7 @@ export type UserResolvers<ContextType = any, ParentType extends ResolversParentT
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   recipes?: Resolver<Array<ResolversTypes['Recipe']>, ParentType, ContextType, Partial<UserRecipesArgs>>;
+  slug?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   username?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
