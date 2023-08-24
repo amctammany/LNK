@@ -11,7 +11,7 @@ import { Prisma } from "@prisma/client";
 //import SimpleObjectsPlugin from "@pothos/plugin-simple-objects";
 export type Context = {
   prisma: typeof prisma;
-  client: typeof db;
+  client: typeof primsa;
 };
 export const builder = new SchemaBuilder<{
   Context: Context;
@@ -24,6 +24,6 @@ export const builder = new SchemaBuilder<{
 }>({
   plugins: [PrismaPlugin],
   prisma: {
-    client: db,
+    client: primsa,
   },
 });

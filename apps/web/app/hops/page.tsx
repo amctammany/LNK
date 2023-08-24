@@ -9,6 +9,7 @@ const query = gql`
   query FindHops {
     findManyHop {
       name
+      urlString
       slug
     }
   }

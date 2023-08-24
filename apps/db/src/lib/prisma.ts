@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
   }
   prisma = global.prisma;
 }
-export default extendPrisma(prisma);
+export default prisma;
 export const db = new PrismaClient({
   // log: ['error', 'info', 'query', 'warn'],
 });

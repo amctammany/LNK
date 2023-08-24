@@ -36,7 +36,7 @@ type PrismaUpdateOperationsInputFilter<T extends object> = {
 
 
 export const UserScalarFieldEnum = builder.enumType('UserScalarFieldEnum', {
-  values: ["id","username","name","email"] as const,
+  values: ["id","username","slug","name","email"] as const,
 });
 
 export const RecipeScalarFieldEnum = builder.enumType('RecipeScalarFieldEnum', {
@@ -61,6 +61,7 @@ export const UserWhereInputFields = (t: any) => ({
   NOT: t.field({"required":false,"type":[UserWhereInput]}),
   id: t.field({"required":false,"type":StringFilter}),
   username: t.field({"required":false,"type":StringFilter}),
+  slug: t.field({"required":false,"type":StringFilter}),
   name: t.field({"required":false,"type":StringFilter}),
   email: t.field({"required":false,"type":StringFilter}),
   recipes: t.field({"required":false,"type":RecipeListRelationFilter}),
@@ -72,6 +73,7 @@ export const UserWhereInput = builder.inputRef<PrismaUpdateOperationsInputFilter
 export const UserOrderByWithRelationInputFields = (t: any) => ({
   id: t.field({"required":false,"type":SortOrder}),
   username: t.field({"required":false,"type":SortOrder}),
+  slug: t.field({"required":false,"type":SortOrder}),
   name: t.field({"required":false,"type":SortOrder}),
   email: t.field({"required":false,"type":SortOrder}),
   recipes: t.field({"required":false,"type":RecipeOrderByRelationAggregateInput}),
@@ -91,6 +93,7 @@ export const UserWhereUniqueInput = builder.inputRef<PrismaUpdateOperationsInput
 export const UserOrderByWithAggregationInputFields = (t: any) => ({
   id: t.field({"required":false,"type":SortOrder}),
   username: t.field({"required":false,"type":SortOrder}),
+  slug: t.field({"required":false,"type":SortOrder}),
   name: t.field({"required":false,"type":SortOrder}),
   email: t.field({"required":false,"type":SortOrder}),
   _count: t.field({"required":false,"type":UserCountOrderByAggregateInput}),
@@ -107,6 +110,7 @@ export const UserScalarWhereWithAggregatesInputFields = (t: any) => ({
   NOT: t.field({"required":false,"type":[UserScalarWhereWithAggregatesInput]}),
   id: t.field({"required":false,"type":StringWithAggregatesFilter}),
   username: t.field({"required":false,"type":StringWithAggregatesFilter}),
+  slug: t.field({"required":false,"type":StringWithAggregatesFilter}),
   name: t.field({"required":false,"type":StringWithAggregatesFilter}),
   email: t.field({"required":false,"type":StringWithAggregatesFilter}),
 });
@@ -353,6 +357,7 @@ export const HopScalarWhereWithAggregatesInput = builder.inputRef<PrismaUpdateOp
 export const UserCreateInputFields = (t: any) => ({
   id: t.string({"required":false}),
   username: t.string({"required":true}),
+  slug: t.string({"required":true}),
   name: t.string({"required":true}),
   email: t.string({"required":true}),
   recipes: t.field({"required":false,"type":RecipeCreateNestedManyWithoutAuthorInput}),
@@ -363,6 +368,7 @@ export const UserCreateInput = builder.inputRef<PrismaUpdateOperationsInputFilte
 
 export const UserUpdateInputFields = (t: any) => ({
   username: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  slug: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
   name: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
   email: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
   recipes: t.field({"required":false,"type":RecipeUpdateManyWithoutAuthorNestedInput}),
@@ -374,6 +380,7 @@ export const UserUpdateInput = builder.inputRef<PrismaUpdateOperationsInputFilte
 export const UserCreateManyInputFields = (t: any) => ({
   id: t.string({"required":false}),
   username: t.string({"required":true}),
+  slug: t.string({"required":true}),
   name: t.string({"required":true}),
   email: t.string({"required":true}),
 });
@@ -383,6 +390,7 @@ export const UserCreateManyInput = builder.inputRef<PrismaUpdateOperationsInputF
 
 export const UserUpdateManyMutationInputFields = (t: any) => ({
   username: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  slug: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
   name: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
   email: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
 });
@@ -622,6 +630,7 @@ export const RecipeOrderByRelationAggregateInput = builder.inputRef<PrismaUpdate
 export const UserCountOrderByAggregateInputFields = (t: any) => ({
   id: t.field({"required":false,"type":SortOrder}),
   username: t.field({"required":false,"type":SortOrder}),
+  slug: t.field({"required":false,"type":SortOrder}),
   name: t.field({"required":false,"type":SortOrder}),
   email: t.field({"required":false,"type":SortOrder}),
 });
@@ -632,6 +641,7 @@ export const UserCountOrderByAggregateInput = builder.inputRef<PrismaUpdateOpera
 export const UserMaxOrderByAggregateInputFields = (t: any) => ({
   id: t.field({"required":false,"type":SortOrder}),
   username: t.field({"required":false,"type":SortOrder}),
+  slug: t.field({"required":false,"type":SortOrder}),
   name: t.field({"required":false,"type":SortOrder}),
   email: t.field({"required":false,"type":SortOrder}),
 });
@@ -642,6 +652,7 @@ export const UserMaxOrderByAggregateInput = builder.inputRef<PrismaUpdateOperati
 export const UserMinOrderByAggregateInputFields = (t: any) => ({
   id: t.field({"required":false,"type":SortOrder}),
   username: t.field({"required":false,"type":SortOrder}),
+  slug: t.field({"required":false,"type":SortOrder}),
   name: t.field({"required":false,"type":SortOrder}),
   email: t.field({"required":false,"type":SortOrder}),
 });
@@ -1269,6 +1280,7 @@ export const RecipeScalarWhereInput = builder.inputRef<PrismaUpdateOperationsInp
 export const UserCreateWithoutRecipesInputFields = (t: any) => ({
   id: t.string({"required":false}),
   username: t.string({"required":true}),
+  slug: t.string({"required":true}),
   name: t.string({"required":true}),
   email: t.string({"required":true}),
 });
@@ -1294,6 +1306,7 @@ export const UserUpsertWithoutRecipesInput = builder.inputRef<PrismaUpdateOperat
 
 export const UserUpdateWithoutRecipesInputFields = (t: any) => ({
   username: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  slug: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
   name: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
   email: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
 });

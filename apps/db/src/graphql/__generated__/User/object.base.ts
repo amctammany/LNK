@@ -13,6 +13,7 @@ export const UserObject = definePrismaObject('User', {
   fields: (t) => ({
     id: t.exposeID('id', UserIdFieldObject),
     username: t.exposeString('username', UserUsernameFieldObject),
+    slug: t.exposeString('slug', UserSlugFieldObject),
     name: t.exposeString('name', UserNameFieldObject),
     email: t.exposeString('email', UserEmailFieldObject),
     recipes: t.relation('recipes', UserRecipesFieldObject(t)),
@@ -25,6 +26,11 @@ export const UserIdFieldObject = defineExposeObject('String', {
 });
 
 export const UserUsernameFieldObject = defineExposeObject('String', {
+  description: undefined,
+  nullable: false,
+});
+
+export const UserSlugFieldObject = defineExposeObject('String', {
   description: undefined,
   nullable: false,
 });

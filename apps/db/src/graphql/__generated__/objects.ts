@@ -5,6 +5,7 @@ export {
   UserObject,
   UserIdFieldObject,
   UserUsernameFieldObject,
+  UserSlugFieldObject,
   UserNameFieldObject,
   UserEmailFieldObject,
   UserRecipesFieldObject,
