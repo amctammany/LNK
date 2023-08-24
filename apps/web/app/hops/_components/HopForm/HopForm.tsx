@@ -1,13 +1,13 @@
 import { Box, Typography } from "@mui/material";
 import { Hop } from "types";
 
-export interface HopDisplayProps {
+export interface HopFormProps {
   hop: Hop;
 }
-export function HopDisplay({ hop }: HopDisplayProps) {
+export function HopForm({ hop }: HopFormProps) {
   return (
     <Box>
-      <Typography variant="h2">Hop Display</Typography>
+      <Typography variant="h2">Hop Form</Typography>
       <ul>
         {Object.entries(hop).map(([k, v]) => (
           <li key={k}>
@@ -20,4 +20,4 @@ export function HopDisplay({ hop }: HopDisplayProps) {
   );
 }
 
-export default HopDisplay;
+export default HopForm;

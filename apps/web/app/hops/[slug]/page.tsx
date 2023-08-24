@@ -3,13 +3,14 @@ import { gql } from "@apollo/client";
 import { getClient } from "../../../lib/client";
 import { type Hop, QueryFindFirstHopArgs } from "types";
 import Link from "next/link";
-import HopDisplay from "./HopDisplay";
+import { HopDisplay } from "../_components";
 
 //import { Query, ResolversTypes } from "types";
 const query = gql`
   query FindHop($slug: String!) {
     findFirstHop(where: { slug: { equals: $slug } }) {
       name
+      urlString
       slug
     }
   }
