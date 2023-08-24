@@ -30,6 +30,7 @@ export default function Page() {
       });
       console.log(r);
     } catch (e) {
+      console.log(e);
       console.error(e.networkError.errors);
     }
   }
