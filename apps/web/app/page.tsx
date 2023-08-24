@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client";
-import { Button, Header } from "ui";
+//import { Button, Header } from "ui";
 import { getClient } from "../lib/client";
 import { type Recipe } from "types";
 
@@ -16,8 +16,6 @@ export default async function Page() {
   });
   return (
     <>
-      <Header text="Web" />
-      <Button>Button</Button>
       <p>{JSON.stringify(data)}</p>
     </>
   );
