@@ -13,16 +13,8 @@ const handler = startServerAndCreateNextHandler(server, {
 });
 
 export async function GET(request: Request) {
-  try {
-    return handler(request);
-  } catch (e) {
-    console.error(e);
-  }
+  return handler(request);
 }
 export async function POST(request: Request) {
-  try {
-    return handler(request);
-  } catch (e) {
-    console.error(e);
-  }
+  return handler(request);
 }

@@ -1,6 +1,7 @@
 import { gql } from "@apollo/client";
 import { getClient } from "../../../lib/client";
 import { HopCreateInput } from "types";
+import { redirect } from "next/navigation";
 
 const mutation = gql`
   mutation CreateHop($data: HopCreateInput!) {
@@ -16,24 +17,20 @@ export default function Page() {
     "use server";
 
     const client = getClient();
-    try {
-      console.log(data);
-      const d = Object.fromEntries(data);
-      console.log(d);
-      const r = await client.mutate({
-        mutation,
-        variables: {
-          data: {
-            name: d.name,
-            slug: d.name,
-          },
+    const d = Object.fromEntries(data);
+    console.log(d);
+    const res = await client.mutate({
+      mutation,
+      variables: {
+        data: {
+          name: d.name,
+          slug: d.name,
         },
-      });
-      console.log(r);
-    } catch (e) {
-      console.log(e);
-      console.error(e.networkError.result);
-    }
+      },
+    });
+    console.log(res);
+    const url = `/hops/${res.data.createOneHop.slug}`;
+    redirect(url);
   }
   return (
     <>
