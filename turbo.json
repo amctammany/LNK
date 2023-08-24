@@ -13,7 +13,7 @@
     "storybook": {},
     "prisma": {},
     "dev": {
-      "dependsOn": ["db:generate"],
+      "dependsOn": ["types", "db:generate"],
 
       "cache": false,
       "persistent": true

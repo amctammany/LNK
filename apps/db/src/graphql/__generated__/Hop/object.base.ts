@@ -64,147 +64,147 @@ export const HopSlugFieldObject = defineExposeObject('String', {
 
 export const HopCountryFieldObject = defineExposeObject('String', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopDescriptionFieldObject = defineExposeObject('String', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopAlphaFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopAlphaLowFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopAlphaHighFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopBetaFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopBetaLowFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopBetaHighFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopCaryophylleneFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopCaryophylleneLowFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopCaryophylleneHighFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopCohumuloneFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopCohumuloneLowFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopCohumuloneHighFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopFarneseneFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopFarneseneLowFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopFarneseneHighFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopHumuleneFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopHumuleneLowFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopHumuleneHighFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopMyrceneFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopMyrceneLowFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopMyrceneHighFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopTotalOilFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopTotalOilLowFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopTotalOilHighFieldObject = defineExposeObject('Float', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopPurposeFieldObject = defineExposeObject('String', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopFlavorFieldObject = defineExposeObject('String', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopNotesFieldObject = defineExposeObject('String', {
   description: undefined,
-  nullable: false,
+  nullable: true,
 });
 
 export const HopStylesFieldObject = defineExposeObject('String', {
