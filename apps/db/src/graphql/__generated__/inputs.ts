@@ -43,6 +43,10 @@ export const RecipeScalarFieldEnum = builder.enumType('RecipeScalarFieldEnum', {
   values: ["id","name","slug","description","authorId"] as const,
 });
 
+export const HopScalarFieldEnum = builder.enumType('HopScalarFieldEnum', {
+  values: ["id","name","slug","country","description","alpha","alphaLow","alphaHigh","beta","betaLow","betaHigh","caryophyllene","caryophylleneLow","caryophylleneHigh","cohumulone","cohumuloneLow","cohumuloneHigh","farnesene","farneseneLow","farneseneHigh","humulene","humuleneLow","humuleneHigh","myrcene","myrceneLow","myrceneHigh","totalOil","totalOilLow","totalOilHigh","purpose","flavor","notes","styles"] as const,
+});
+
 export const SortOrder = builder.enumType('SortOrder', {
   values: ["asc","desc"] as const,
 });
@@ -172,6 +176,180 @@ export const RecipeScalarWhereWithAggregatesInput = builder.inputRef<PrismaUpdat
   fields: RecipeScalarWhereWithAggregatesInputFields,
 });
 
+export const HopWhereInputFields = (t: any) => ({
+  AND: t.field({"required":false,"type":[HopWhereInput]}),
+  OR: t.field({"required":false,"type":[HopWhereInput]}),
+  NOT: t.field({"required":false,"type":[HopWhereInput]}),
+  id: t.field({"required":false,"type":StringFilter}),
+  name: t.field({"required":false,"type":StringFilter}),
+  slug: t.field({"required":false,"type":StringFilter}),
+  country: t.field({"required":false,"type":StringFilter}),
+  description: t.field({"required":false,"type":StringFilter}),
+  alpha: t.field({"required":false,"type":FloatFilter}),
+  alphaLow: t.field({"required":false,"type":FloatFilter}),
+  alphaHigh: t.field({"required":false,"type":FloatFilter}),
+  beta: t.field({"required":false,"type":FloatFilter}),
+  betaLow: t.field({"required":false,"type":FloatFilter}),
+  betaHigh: t.field({"required":false,"type":FloatFilter}),
+  caryophyllene: t.field({"required":false,"type":FloatFilter}),
+  caryophylleneLow: t.field({"required":false,"type":FloatFilter}),
+  caryophylleneHigh: t.field({"required":false,"type":FloatFilter}),
+  cohumulone: t.field({"required":false,"type":FloatFilter}),
+  cohumuloneLow: t.field({"required":false,"type":FloatFilter}),
+  cohumuloneHigh: t.field({"required":false,"type":FloatFilter}),
+  farnesene: t.field({"required":false,"type":FloatFilter}),
+  farneseneLow: t.field({"required":false,"type":FloatFilter}),
+  farneseneHigh: t.field({"required":false,"type":FloatFilter}),
+  humulene: t.field({"required":false,"type":FloatFilter}),
+  humuleneLow: t.field({"required":false,"type":FloatFilter}),
+  humuleneHigh: t.field({"required":false,"type":FloatFilter}),
+  myrcene: t.field({"required":false,"type":FloatFilter}),
+  myrceneLow: t.field({"required":false,"type":FloatFilter}),
+  myrceneHigh: t.field({"required":false,"type":FloatFilter}),
+  totalOil: t.field({"required":false,"type":FloatFilter}),
+  totalOilLow: t.field({"required":false,"type":FloatFilter}),
+  totalOilHigh: t.field({"required":false,"type":FloatFilter}),
+  purpose: t.field({"required":false,"type":StringFilter}),
+  flavor: t.field({"required":false,"type":StringFilter}),
+  notes: t.field({"required":false,"type":StringFilter}),
+  styles: t.field({"required":false,"type":StringNullableListFilter}),
+});
+export const HopWhereInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopWhereInput>>('HopWhereInput').implement({
+  fields: HopWhereInputFields,
+});
+
+export const HopOrderByWithRelationInputFields = (t: any) => ({
+  id: t.field({"required":false,"type":SortOrder}),
+  name: t.field({"required":false,"type":SortOrder}),
+  slug: t.field({"required":false,"type":SortOrder}),
+  country: t.field({"required":false,"type":SortOrder}),
+  description: t.field({"required":false,"type":SortOrder}),
+  alpha: t.field({"required":false,"type":SortOrder}),
+  alphaLow: t.field({"required":false,"type":SortOrder}),
+  alphaHigh: t.field({"required":false,"type":SortOrder}),
+  beta: t.field({"required":false,"type":SortOrder}),
+  betaLow: t.field({"required":false,"type":SortOrder}),
+  betaHigh: t.field({"required":false,"type":SortOrder}),
+  caryophyllene: t.field({"required":false,"type":SortOrder}),
+  caryophylleneLow: t.field({"required":false,"type":SortOrder}),
+  caryophylleneHigh: t.field({"required":false,"type":SortOrder}),
+  cohumulone: t.field({"required":false,"type":SortOrder}),
+  cohumuloneLow: t.field({"required":false,"type":SortOrder}),
+  cohumuloneHigh: t.field({"required":false,"type":SortOrder}),
+  farnesene: t.field({"required":false,"type":SortOrder}),
+  farneseneLow: t.field({"required":false,"type":SortOrder}),
+  farneseneHigh: t.field({"required":false,"type":SortOrder}),
+  humulene: t.field({"required":false,"type":SortOrder}),
+  humuleneLow: t.field({"required":false,"type":SortOrder}),
+  humuleneHigh: t.field({"required":false,"type":SortOrder}),
+  myrcene: t.field({"required":false,"type":SortOrder}),
+  myrceneLow: t.field({"required":false,"type":SortOrder}),
+  myrceneHigh: t.field({"required":false,"type":SortOrder}),
+  totalOil: t.field({"required":false,"type":SortOrder}),
+  totalOilLow: t.field({"required":false,"type":SortOrder}),
+  totalOilHigh: t.field({"required":false,"type":SortOrder}),
+  purpose: t.field({"required":false,"type":SortOrder}),
+  flavor: t.field({"required":false,"type":SortOrder}),
+  notes: t.field({"required":false,"type":SortOrder}),
+  styles: t.field({"required":false,"type":SortOrder}),
+});
+export const HopOrderByWithRelationInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopOrderByWithRelationInput>>('HopOrderByWithRelationInput').implement({
+  fields: HopOrderByWithRelationInputFields,
+});
+
+export const HopWhereUniqueInputFields = (t: any) => ({
+  id: t.string({"required":false}),
+});
+export const HopWhereUniqueInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopWhereUniqueInput>>('HopWhereUniqueInput').implement({
+  fields: HopWhereUniqueInputFields,
+});
+
+export const HopOrderByWithAggregationInputFields = (t: any) => ({
+  id: t.field({"required":false,"type":SortOrder}),
+  name: t.field({"required":false,"type":SortOrder}),
+  slug: t.field({"required":false,"type":SortOrder}),
+  country: t.field({"required":false,"type":SortOrder}),
+  description: t.field({"required":false,"type":SortOrder}),
+  alpha: t.field({"required":false,"type":SortOrder}),
+  alphaLow: t.field({"required":false,"type":SortOrder}),
+  alphaHigh: t.field({"required":false,"type":SortOrder}),
+  beta: t.field({"required":false,"type":SortOrder}),
+  betaLow: t.field({"required":false,"type":SortOrder}),
+  betaHigh: t.field({"required":false,"type":SortOrder}),
+  caryophyllene: t.field({"required":false,"type":SortOrder}),
+  caryophylleneLow: t.field({"required":false,"type":SortOrder}),
+  caryophylleneHigh: t.field({"required":false,"type":SortOrder}),
+  cohumulone: t.field({"required":false,"type":SortOrder}),
+  cohumuloneLow: t.field({"required":false,"type":SortOrder}),
+  cohumuloneHigh: t.field({"required":false,"type":SortOrder}),
+  farnesene: t.field({"required":false,"type":SortOrder}),
+  farneseneLow: t.field({"required":false,"type":SortOrder}),
+  farneseneHigh: t.field({"required":false,"type":SortOrder}),
+  humulene: t.field({"required":false,"type":SortOrder}),
+  humuleneLow: t.field({"required":false,"type":SortOrder}),
+  humuleneHigh: t.field({"required":false,"type":SortOrder}),
+  myrcene: t.field({"required":false,"type":SortOrder}),
+  myrceneLow: t.field({"required":false,"type":SortOrder}),
+  myrceneHigh: t.field({"required":false,"type":SortOrder}),
+  totalOil: t.field({"required":false,"type":SortOrder}),
+  totalOilLow: t.field({"required":false,"type":SortOrder}),
+  totalOilHigh: t.field({"required":false,"type":SortOrder}),
+  purpose: t.field({"required":false,"type":SortOrder}),
+  flavor: t.field({"required":false,"type":SortOrder}),
+  notes: t.field({"required":false,"type":SortOrder}),
+  styles: t.field({"required":false,"type":SortOrder}),
+  _count: t.field({"required":false,"type":HopCountOrderByAggregateInput}),
+  _avg: t.field({"required":false,"type":HopAvgOrderByAggregateInput}),
+  _max: t.field({"required":false,"type":HopMaxOrderByAggregateInput}),
+  _min: t.field({"required":false,"type":HopMinOrderByAggregateInput}),
+  _sum: t.field({"required":false,"type":HopSumOrderByAggregateInput}),
+});
+export const HopOrderByWithAggregationInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopOrderByWithAggregationInput>>('HopOrderByWithAggregationInput').implement({
+  fields: HopOrderByWithAggregationInputFields,
+});
+
+export const HopScalarWhereWithAggregatesInputFields = (t: any) => ({
+  AND: t.field({"required":false,"type":[HopScalarWhereWithAggregatesInput]}),
+  OR: t.field({"required":false,"type":[HopScalarWhereWithAggregatesInput]}),
+  NOT: t.field({"required":false,"type":[HopScalarWhereWithAggregatesInput]}),
+  id: t.field({"required":false,"type":StringWithAggregatesFilter}),
+  name: t.field({"required":false,"type":StringWithAggregatesFilter}),
+  slug: t.field({"required":false,"type":StringWithAggregatesFilter}),
+  country: t.field({"required":false,"type":StringWithAggregatesFilter}),
+  description: t.field({"required":false,"type":StringWithAggregatesFilter}),
+  alpha: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  alphaLow: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  alphaHigh: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  beta: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  betaLow: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  betaHigh: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  caryophyllene: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  caryophylleneLow: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  caryophylleneHigh: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  cohumulone: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  cohumuloneLow: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  cohumuloneHigh: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  farnesene: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  farneseneLow: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  farneseneHigh: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  humulene: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  humuleneLow: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  humuleneHigh: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  myrcene: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  myrceneLow: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  myrceneHigh: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  totalOil: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  totalOilLow: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  totalOilHigh: t.field({"required":false,"type":FloatWithAggregatesFilter}),
+  purpose: t.field({"required":false,"type":StringWithAggregatesFilter}),
+  flavor: t.field({"required":false,"type":StringWithAggregatesFilter}),
+  notes: t.field({"required":false,"type":StringWithAggregatesFilter}),
+  styles: t.field({"required":false,"type":StringNullableListFilter}),
+});
+export const HopScalarWhereWithAggregatesInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopScalarWhereWithAggregatesInput>>('HopScalarWhereWithAggregatesInput').implement({
+  fields: HopScalarWhereWithAggregatesInputFields,
+});
+
 export const UserCreateInputFields = (t: any) => ({
   id: t.string({"required":false}),
   username: t.string({"required":true}),
@@ -251,6 +429,160 @@ export const RecipeUpdateManyMutationInputFields = (t: any) => ({
 });
 export const RecipeUpdateManyMutationInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.RecipeUpdateManyMutationInput>>('RecipeUpdateManyMutationInput').implement({
   fields: RecipeUpdateManyMutationInputFields,
+});
+
+export const HopCreateInputFields = (t: any) => ({
+  id: t.string({"required":false}),
+  name: t.string({"required":true}),
+  slug: t.string({"required":true}),
+  country: t.string({"required":true}),
+  description: t.string({"required":true}),
+  alpha: t.float({"required":true}),
+  alphaLow: t.float({"required":true}),
+  alphaHigh: t.float({"required":true}),
+  beta: t.float({"required":true}),
+  betaLow: t.float({"required":true}),
+  betaHigh: t.float({"required":true}),
+  caryophyllene: t.float({"required":true}),
+  caryophylleneLow: t.float({"required":true}),
+  caryophylleneHigh: t.float({"required":true}),
+  cohumulone: t.float({"required":true}),
+  cohumuloneLow: t.float({"required":true}),
+  cohumuloneHigh: t.float({"required":true}),
+  farnesene: t.float({"required":true}),
+  farneseneLow: t.float({"required":true}),
+  farneseneHigh: t.float({"required":true}),
+  humulene: t.float({"required":true}),
+  humuleneLow: t.float({"required":true}),
+  humuleneHigh: t.float({"required":true}),
+  myrcene: t.float({"required":true}),
+  myrceneLow: t.float({"required":true}),
+  myrceneHigh: t.float({"required":true}),
+  totalOil: t.float({"required":true}),
+  totalOilLow: t.float({"required":true}),
+  totalOilHigh: t.float({"required":true}),
+  purpose: t.string({"required":true}),
+  flavor: t.string({"required":true}),
+  notes: t.string({"required":true}),
+  styles: t.stringList({"required":false}),
+});
+export const HopCreateInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopCreateInput>>('HopCreateInput').implement({
+  fields: HopCreateInputFields,
+});
+
+export const HopUpdateInputFields = (t: any) => ({
+  name: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  slug: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  country: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  description: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  alpha: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  alphaLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  alphaHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  beta: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  betaLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  betaHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  caryophyllene: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  caryophylleneLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  caryophylleneHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  cohumulone: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  cohumuloneLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  cohumuloneHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  farnesene: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  farneseneLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  farneseneHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  humulene: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  humuleneLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  humuleneHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  myrcene: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  myrceneLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  myrceneHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  totalOil: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  totalOilLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  totalOilHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  purpose: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  flavor: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  notes: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  styles: t.stringList({"required":false}),
+});
+export const HopUpdateInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopUpdateInput>>('HopUpdateInput').implement({
+  fields: HopUpdateInputFields,
+});
+
+export const HopCreateManyInputFields = (t: any) => ({
+  id: t.string({"required":false}),
+  name: t.string({"required":true}),
+  slug: t.string({"required":true}),
+  country: t.string({"required":true}),
+  description: t.string({"required":true}),
+  alpha: t.float({"required":true}),
+  alphaLow: t.float({"required":true}),
+  alphaHigh: t.float({"required":true}),
+  beta: t.float({"required":true}),
+  betaLow: t.float({"required":true}),
+  betaHigh: t.float({"required":true}),
+  caryophyllene: t.float({"required":true}),
+  caryophylleneLow: t.float({"required":true}),
+  caryophylleneHigh: t.float({"required":true}),
+  cohumulone: t.float({"required":true}),
+  cohumuloneLow: t.float({"required":true}),
+  cohumuloneHigh: t.float({"required":true}),
+  farnesene: t.float({"required":true}),
+  farneseneLow: t.float({"required":true}),
+  farneseneHigh: t.float({"required":true}),
+  humulene: t.float({"required":true}),
+  humuleneLow: t.float({"required":true}),
+  humuleneHigh: t.float({"required":true}),
+  myrcene: t.float({"required":true}),
+  myrceneLow: t.float({"required":true}),
+  myrceneHigh: t.float({"required":true}),
+  totalOil: t.float({"required":true}),
+  totalOilLow: t.float({"required":true}),
+  totalOilHigh: t.float({"required":true}),
+  purpose: t.string({"required":true}),
+  flavor: t.string({"required":true}),
+  notes: t.string({"required":true}),
+  styles: t.stringList({"required":false}),
+});
+export const HopCreateManyInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopCreateManyInput>>('HopCreateManyInput').implement({
+  fields: HopCreateManyInputFields,
+});
+
+export const HopUpdateManyMutationInputFields = (t: any) => ({
+  name: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  slug: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  country: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  description: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  alpha: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  alphaLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  alphaHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  beta: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  betaLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  betaHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  caryophyllene: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  caryophylleneLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  caryophylleneHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  cohumulone: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  cohumuloneLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  cohumuloneHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  farnesene: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  farneseneLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  farneseneHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  humulene: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  humuleneLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  humuleneHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  myrcene: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  myrceneLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  myrceneHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  totalOil: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  totalOilLow: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  totalOilHigh: t.field({"required":false,"type":FloatFieldUpdateOperationsInput}),
+  purpose: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  flavor: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  notes: t.field({"required":false,"type":StringFieldUpdateOperationsInput}),
+  styles: t.stringList({"required":false}),
+});
+export const HopUpdateManyMutationInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopUpdateManyMutationInput>>('HopUpdateManyMutationInput').implement({
+  fields: HopUpdateManyMutationInputFields,
 });
 
 export const StringFilterFields = (t: any) => ({
@@ -379,6 +711,225 @@ export const RecipeMinOrderByAggregateInput = builder.inputRef<PrismaUpdateOpera
   fields: RecipeMinOrderByAggregateInputFields,
 });
 
+export const FloatFilterFields = (t: any) => ({
+  equals: t.float({"required":false}),
+  in: t.floatList({"required":false}),
+  notIn: t.floatList({"required":false}),
+  lt: t.float({"required":false}),
+  lte: t.float({"required":false}),
+  gt: t.float({"required":false}),
+  gte: t.float({"required":false}),
+  not: t.field({"required":false,"type":NestedFloatFilter}),
+});
+export const FloatFilter = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.FloatFilter>>('FloatFilter').implement({
+  fields: FloatFilterFields,
+});
+
+export const StringNullableListFilterFields = (t: any) => ({
+  equals: t.stringList({"required":false}),
+  has: t.string({"required":false}),
+  hasEvery: t.stringList({"required":false}),
+  hasSome: t.stringList({"required":false}),
+  isEmpty: t.boolean({"required":false}),
+});
+export const StringNullableListFilter = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.StringNullableListFilter>>('StringNullableListFilter').implement({
+  fields: StringNullableListFilterFields,
+});
+
+export const HopCountOrderByAggregateInputFields = (t: any) => ({
+  id: t.field({"required":false,"type":SortOrder}),
+  name: t.field({"required":false,"type":SortOrder}),
+  slug: t.field({"required":false,"type":SortOrder}),
+  country: t.field({"required":false,"type":SortOrder}),
+  description: t.field({"required":false,"type":SortOrder}),
+  alpha: t.field({"required":false,"type":SortOrder}),
+  alphaLow: t.field({"required":false,"type":SortOrder}),
+  alphaHigh: t.field({"required":false,"type":SortOrder}),
+  beta: t.field({"required":false,"type":SortOrder}),
+  betaLow: t.field({"required":false,"type":SortOrder}),
+  betaHigh: t.field({"required":false,"type":SortOrder}),
+  caryophyllene: t.field({"required":false,"type":SortOrder}),
+  caryophylleneLow: t.field({"required":false,"type":SortOrder}),
+  caryophylleneHigh: t.field({"required":false,"type":SortOrder}),
+  cohumulone: t.field({"required":false,"type":SortOrder}),
+  cohumuloneLow: t.field({"required":false,"type":SortOrder}),
+  cohumuloneHigh: t.field({"required":false,"type":SortOrder}),
+  farnesene: t.field({"required":false,"type":SortOrder}),
+  farneseneLow: t.field({"required":false,"type":SortOrder}),
+  farneseneHigh: t.field({"required":false,"type":SortOrder}),
+  humulene: t.field({"required":false,"type":SortOrder}),
+  humuleneLow: t.field({"required":false,"type":SortOrder}),
+  humuleneHigh: t.field({"required":false,"type":SortOrder}),
+  myrcene: t.field({"required":false,"type":SortOrder}),
+  myrceneLow: t.field({"required":false,"type":SortOrder}),
+  myrceneHigh: t.field({"required":false,"type":SortOrder}),
+  totalOil: t.field({"required":false,"type":SortOrder}),
+  totalOilLow: t.field({"required":false,"type":SortOrder}),
+  totalOilHigh: t.field({"required":false,"type":SortOrder}),
+  purpose: t.field({"required":false,"type":SortOrder}),
+  flavor: t.field({"required":false,"type":SortOrder}),
+  notes: t.field({"required":false,"type":SortOrder}),
+  styles: t.field({"required":false,"type":SortOrder}),
+});
+export const HopCountOrderByAggregateInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopCountOrderByAggregateInput>>('HopCountOrderByAggregateInput').implement({
+  fields: HopCountOrderByAggregateInputFields,
+});
+
+export const HopAvgOrderByAggregateInputFields = (t: any) => ({
+  alpha: t.field({"required":false,"type":SortOrder}),
+  alphaLow: t.field({"required":false,"type":SortOrder}),
+  alphaHigh: t.field({"required":false,"type":SortOrder}),
+  beta: t.field({"required":false,"type":SortOrder}),
+  betaLow: t.field({"required":false,"type":SortOrder}),
+  betaHigh: t.field({"required":false,"type":SortOrder}),
+  caryophyllene: t.field({"required":false,"type":SortOrder}),
+  caryophylleneLow: t.field({"required":false,"type":SortOrder}),
+  caryophylleneHigh: t.field({"required":false,"type":SortOrder}),
+  cohumulone: t.field({"required":false,"type":SortOrder}),
+  cohumuloneLow: t.field({"required":false,"type":SortOrder}),
+  cohumuloneHigh: t.field({"required":false,"type":SortOrder}),
+  farnesene: t.field({"required":false,"type":SortOrder}),
+  farneseneLow: t.field({"required":false,"type":SortOrder}),
+  farneseneHigh: t.field({"required":false,"type":SortOrder}),
+  humulene: t.field({"required":false,"type":SortOrder}),
+  humuleneLow: t.field({"required":false,"type":SortOrder}),
+  humuleneHigh: t.field({"required":false,"type":SortOrder}),
+  myrcene: t.field({"required":false,"type":SortOrder}),
+  myrceneLow: t.field({"required":false,"type":SortOrder}),
+  myrceneHigh: t.field({"required":false,"type":SortOrder}),
+  totalOil: t.field({"required":false,"type":SortOrder}),
+  totalOilLow: t.field({"required":false,"type":SortOrder}),
+  totalOilHigh: t.field({"required":false,"type":SortOrder}),
+});
+export const HopAvgOrderByAggregateInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopAvgOrderByAggregateInput>>('HopAvgOrderByAggregateInput').implement({
+  fields: HopAvgOrderByAggregateInputFields,
+});
+
+export const HopMaxOrderByAggregateInputFields = (t: any) => ({
+  id: t.field({"required":false,"type":SortOrder}),
+  name: t.field({"required":false,"type":SortOrder}),
+  slug: t.field({"required":false,"type":SortOrder}),
+  country: t.field({"required":false,"type":SortOrder}),
+  description: t.field({"required":false,"type":SortOrder}),
+  alpha: t.field({"required":false,"type":SortOrder}),
+  alphaLow: t.field({"required":false,"type":SortOrder}),
+  alphaHigh: t.field({"required":false,"type":SortOrder}),
+  beta: t.field({"required":false,"type":SortOrder}),
+  betaLow: t.field({"required":false,"type":SortOrder}),
+  betaHigh: t.field({"required":false,"type":SortOrder}),
+  caryophyllene: t.field({"required":false,"type":SortOrder}),
+  caryophylleneLow: t.field({"required":false,"type":SortOrder}),
+  caryophylleneHigh: t.field({"required":false,"type":SortOrder}),
+  cohumulone: t.field({"required":false,"type":SortOrder}),
+  cohumuloneLow: t.field({"required":false,"type":SortOrder}),
+  cohumuloneHigh: t.field({"required":false,"type":SortOrder}),
+  farnesene: t.field({"required":false,"type":SortOrder}),
+  farneseneLow: t.field({"required":false,"type":SortOrder}),
+  farneseneHigh: t.field({"required":false,"type":SortOrder}),
+  humulene: t.field({"required":false,"type":SortOrder}),
+  humuleneLow: t.field({"required":false,"type":SortOrder}),
+  humuleneHigh: t.field({"required":false,"type":SortOrder}),
+  myrcene: t.field({"required":false,"type":SortOrder}),
+  myrceneLow: t.field({"required":false,"type":SortOrder}),
+  myrceneHigh: t.field({"required":false,"type":SortOrder}),
+  totalOil: t.field({"required":false,"type":SortOrder}),
+  totalOilLow: t.field({"required":false,"type":SortOrder}),
+  totalOilHigh: t.field({"required":false,"type":SortOrder}),
+  purpose: t.field({"required":false,"type":SortOrder}),
+  flavor: t.field({"required":false,"type":SortOrder}),
+  notes: t.field({"required":false,"type":SortOrder}),
+});
+export const HopMaxOrderByAggregateInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopMaxOrderByAggregateInput>>('HopMaxOrderByAggregateInput').implement({
+  fields: HopMaxOrderByAggregateInputFields,
+});
+
+export const HopMinOrderByAggregateInputFields = (t: any) => ({
+  id: t.field({"required":false,"type":SortOrder}),
+  name: t.field({"required":false,"type":SortOrder}),
+  slug: t.field({"required":false,"type":SortOrder}),
+  country: t.field({"required":false,"type":SortOrder}),
+  description: t.field({"required":false,"type":SortOrder}),
+  alpha: t.field({"required":false,"type":SortOrder}),
+  alphaLow: t.field({"required":false,"type":SortOrder}),
+  alphaHigh: t.field({"required":false,"type":SortOrder}),
+  beta: t.field({"required":false,"type":SortOrder}),
+  betaLow: t.field({"required":false,"type":SortOrder}),
+  betaHigh: t.field({"required":false,"type":SortOrder}),
+  caryophyllene: t.field({"required":false,"type":SortOrder}),
+  caryophylleneLow: t.field({"required":false,"type":SortOrder}),
+  caryophylleneHigh: t.field({"required":false,"type":SortOrder}),
+  cohumulone: t.field({"required":false,"type":SortOrder}),
+  cohumuloneLow: t.field({"required":false,"type":SortOrder}),
+  cohumuloneHigh: t.field({"required":false,"type":SortOrder}),
+  farnesene: t.field({"required":false,"type":SortOrder}),
+  farneseneLow: t.field({"required":false,"type":SortOrder}),
+  farneseneHigh: t.field({"required":false,"type":SortOrder}),
+  humulene: t.field({"required":false,"type":SortOrder}),
+  humuleneLow: t.field({"required":false,"type":SortOrder}),
+  humuleneHigh: t.field({"required":false,"type":SortOrder}),
+  myrcene: t.field({"required":false,"type":SortOrder}),
+  myrceneLow: t.field({"required":false,"type":SortOrder}),
+  myrceneHigh: t.field({"required":false,"type":SortOrder}),
+  totalOil: t.field({"required":false,"type":SortOrder}),
+  totalOilLow: t.field({"required":false,"type":SortOrder}),
+  totalOilHigh: t.field({"required":false,"type":SortOrder}),
+  purpose: t.field({"required":false,"type":SortOrder}),
+  flavor: t.field({"required":false,"type":SortOrder}),
+  notes: t.field({"required":false,"type":SortOrder}),
+});
+export const HopMinOrderByAggregateInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopMinOrderByAggregateInput>>('HopMinOrderByAggregateInput').implement({
+  fields: HopMinOrderByAggregateInputFields,
+});
+
+export const HopSumOrderByAggregateInputFields = (t: any) => ({
+  alpha: t.field({"required":false,"type":SortOrder}),
+  alphaLow: t.field({"required":false,"type":SortOrder}),
+  alphaHigh: t.field({"required":false,"type":SortOrder}),
+  beta: t.field({"required":false,"type":SortOrder}),
+  betaLow: t.field({"required":false,"type":SortOrder}),
+  betaHigh: t.field({"required":false,"type":SortOrder}),
+  caryophyllene: t.field({"required":false,"type":SortOrder}),
+  caryophylleneLow: t.field({"required":false,"type":SortOrder}),
+  caryophylleneHigh: t.field({"required":false,"type":SortOrder}),
+  cohumulone: t.field({"required":false,"type":SortOrder}),
+  cohumuloneLow: t.field({"required":false,"type":SortOrder}),
+  cohumuloneHigh: t.field({"required":false,"type":SortOrder}),
+  farnesene: t.field({"required":false,"type":SortOrder}),
+  farneseneLow: t.field({"required":false,"type":SortOrder}),
+  farneseneHigh: t.field({"required":false,"type":SortOrder}),
+  humulene: t.field({"required":false,"type":SortOrder}),
+  humuleneLow: t.field({"required":false,"type":SortOrder}),
+  humuleneHigh: t.field({"required":false,"type":SortOrder}),
+  myrcene: t.field({"required":false,"type":SortOrder}),
+  myrceneLow: t.field({"required":false,"type":SortOrder}),
+  myrceneHigh: t.field({"required":false,"type":SortOrder}),
+  totalOil: t.field({"required":false,"type":SortOrder}),
+  totalOilLow: t.field({"required":false,"type":SortOrder}),
+  totalOilHigh: t.field({"required":false,"type":SortOrder}),
+});
+export const HopSumOrderByAggregateInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopSumOrderByAggregateInput>>('HopSumOrderByAggregateInput').implement({
+  fields: HopSumOrderByAggregateInputFields,
+});
+
+export const FloatWithAggregatesFilterFields = (t: any) => ({
+  equals: t.float({"required":false}),
+  in: t.floatList({"required":false}),
+  notIn: t.floatList({"required":false}),
+  lt: t.float({"required":false}),
+  lte: t.float({"required":false}),
+  gt: t.float({"required":false}),
+  gte: t.float({"required":false}),
+  not: t.field({"required":false,"type":NestedFloatWithAggregatesFilter}),
+  _count: t.field({"required":false,"type":NestedIntFilter}),
+  _avg: t.field({"required":false,"type":NestedFloatFilter}),
+  _sum: t.field({"required":false,"type":NestedFloatFilter}),
+  _min: t.field({"required":false,"type":NestedFloatFilter}),
+  _max: t.field({"required":false,"type":NestedFloatFilter}),
+});
+export const FloatWithAggregatesFilter = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.FloatWithAggregatesFilter>>('FloatWithAggregatesFilter').implement({
+  fields: FloatWithAggregatesFilterFields,
+});
+
 export const RecipeCreateNestedManyWithoutAuthorInputFields = (t: any) => ({
   create: t.field({"required":false,"type":[RecipeCreateWithoutAuthorInput]}),
   connectOrCreate: t.field({"required":false,"type":[RecipeCreateOrConnectWithoutAuthorInput]}),
@@ -433,6 +984,32 @@ export const UserUpdateOneRequiredWithoutRecipesNestedInput = builder.inputRef<P
   fields: UserUpdateOneRequiredWithoutRecipesNestedInputFields,
 });
 
+export const HopCreatestylesInputFields = (t: any) => ({
+  set: t.stringList({"required":true}),
+});
+export const HopCreatestylesInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopCreatestylesInput>>('HopCreatestylesInput').implement({
+  fields: HopCreatestylesInputFields,
+});
+
+export const FloatFieldUpdateOperationsInputFields = (t: any) => ({
+  set: t.float({"required":false}),
+  increment: t.float({"required":false}),
+  decrement: t.float({"required":false}),
+  multiply: t.float({"required":false}),
+  divide: t.float({"required":false}),
+});
+export const FloatFieldUpdateOperationsInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.FloatFieldUpdateOperationsInput>>('FloatFieldUpdateOperationsInput').implement({
+  fields: FloatFieldUpdateOperationsInputFields,
+});
+
+export const HopUpdatestylesInputFields = (t: any) => ({
+  set: t.stringList({"required":false}),
+  push: t.stringList({"required":false}),
+});
+export const HopUpdatestylesInput = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.HopUpdatestylesInput>>('HopUpdatestylesInput').implement({
+  fields: HopUpdatestylesInputFields,
+});
+
 export const NestedStringFilterFields = (t: any) => ({
   equals: t.string({"required":false}),
   in: t.stringList({"required":false}),
@@ -482,6 +1059,39 @@ export const NestedIntFilterFields = (t: any) => ({
 });
 export const NestedIntFilter = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.NestedIntFilter>>('NestedIntFilter').implement({
   fields: NestedIntFilterFields,
+});
+
+export const NestedFloatFilterFields = (t: any) => ({
+  equals: t.float({"required":false}),
+  in: t.floatList({"required":false}),
+  notIn: t.floatList({"required":false}),
+  lt: t.float({"required":false}),
+  lte: t.float({"required":false}),
+  gt: t.float({"required":false}),
+  gte: t.float({"required":false}),
+  not: t.field({"required":false,"type":NestedFloatFilter}),
+});
+export const NestedFloatFilter = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.NestedFloatFilter>>('NestedFloatFilter').implement({
+  fields: NestedFloatFilterFields,
+});
+
+export const NestedFloatWithAggregatesFilterFields = (t: any) => ({
+  equals: t.float({"required":false}),
+  in: t.floatList({"required":false}),
+  notIn: t.floatList({"required":false}),
+  lt: t.float({"required":false}),
+  lte: t.float({"required":false}),
+  gt: t.float({"required":false}),
+  gte: t.float({"required":false}),
+  not: t.field({"required":false,"type":NestedFloatWithAggregatesFilter}),
+  _count: t.field({"required":false,"type":NestedIntFilter}),
+  _avg: t.field({"required":false,"type":NestedFloatFilter}),
+  _sum: t.field({"required":false,"type":NestedFloatFilter}),
+  _min: t.field({"required":false,"type":NestedFloatFilter}),
+  _max: t.field({"required":false,"type":NestedFloatFilter}),
+});
+export const NestedFloatWithAggregatesFilter = builder.inputRef<PrismaUpdateOperationsInputFilter<Prisma.NestedFloatWithAggregatesFilter>>('NestedFloatWithAggregatesFilter').implement({
+  fields: NestedFloatWithAggregatesFilterFields,
 });
 
 export const RecipeCreateWithoutAuthorInputFields = (t: any) => ({

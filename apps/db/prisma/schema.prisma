@@ -37,3 +37,39 @@ model Recipe {
   authorId    String @db.ObjectId
   author      User   @relation(fields: [authorId], references: [id])
 }
+
+model Hop {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  name              String
+  slug              String
+  country           String
+  description       String
+  alpha             Float
+  alphaLow          Float
+  alphaHigh         Float
+  beta              Float
+  betaLow           Float
+  betaHigh          Float
+  caryophyllene     Float
+  caryophylleneLow  Float
+  caryophylleneHigh Float
+  cohumulone        Float
+  cohumuloneLow     Float
+  cohumuloneHigh    Float
+  farnesene         Float
+  farneseneLow      Float
+  farneseneHigh     Float
+  humulene          Float
+  humuleneLow       Float
+  humuleneHigh      Float
+  myrcene           Float
+  myrceneLow        Float
+  myrceneHigh       Float
+  totalOil          Float
+  totalOilLow       Float
+  totalOilHigh      Float
+  purpose           String
+  flavor            String
+  notes             String
+  styles            String[]
+}

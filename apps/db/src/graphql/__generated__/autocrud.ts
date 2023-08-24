@@ -1,6 +1,7 @@
 import { builder } from '@/graphql/builder';
 import * as User from './User';
 import * as Recipe from './Recipe';
+import * as Hop from './Hop';
 import * as Objects from './objects';
 
 type Model = Objects.Model;
@@ -47,6 +48,24 @@ export const Cruds: Record<
       updateMany: Recipe.updateManyRecipeMutationObject,
       updateOne: Recipe.updateOneRecipeMutationObject,
       upsertOne: Recipe.upsertOneRecipeMutationObject,
+    },
+  },
+  Hop: {
+    Object: Hop.HopObject,
+    queries: {
+      findFirst: Hop.findFirstHopQueryObject,
+      findMany: Hop.findManyHopQueryObject,
+      count: Hop.countHopQueryObject,
+      findUnique: Hop.findUniqueHopQueryObject,
+    },
+    mutations: {
+      createMany: Hop.createManyHopMutationObject,
+      createOne: Hop.createOneHopMutationObject,
+      deleteMany: Hop.deleteManyHopMutationObject,
+      deleteOne: Hop.deleteOneHopMutationObject,
+      updateMany: Hop.updateManyHopMutationObject,
+      updateOne: Hop.updateOneHopMutationObject,
+      upsertOne: Hop.upsertOneHopMutationObject,
     },
   },
 };
