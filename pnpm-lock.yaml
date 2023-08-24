@@ -96,6 +96,9 @@ importers:
       '@apollo/experimental-nextjs-app-support':
         specifier: ^0.3.2
         version: 0.3.2(@apollo/client@3.8.0-alpha.15)(next@13.4.19)(react@18.2.0)
+      '@emotion/cache':
+        specifier: ^11.11.0
+        version: 11.11.0
       '@emotion/react':
         specifier: ^11.11.1
         version: 11.11.1(@types/react@18.2.5)(react@18.2.0)
